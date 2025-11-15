@@ -165,12 +165,12 @@ const PUPITOHomepage = () => {
               Anime apparel for every arc of you — now in midnight mode.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-3">
-              <Link href="/products">
+              <Link href="/shop">
                 <Button className="bg-linear-to-r from-[#1E90FF] to-[#00FFFF] hover:from-[#FFD700] hover:to-[#FF69B4] hover:text-black text-white font-semibold rounded-xl px-8 py-3 shadow-[0_0_20px_rgba(30,144,255,0.4)] hover:shadow-[0_0_25px_rgba(255,215,0,0.6)] transition-all duration-300">
                   Shop Now
                 </Button>
               </Link>
-              <Link href="/products">
+              <Link href="/shop#collections">
                 <Button className="bg-transparent border-2 border-[#FF69B4] text-[#FF69B4] hover:bg-linear-to-r hover:from-[#FF69B4] hover:to-[#FF1493] hover:text-black hover:border-[#FF1493] font-semibold rounded-xl px-8 py-3 shadow-[0_0_15px_rgba(255,105,180,0.3)] transition-all duration-300">
                   View Collections
                 </Button>
@@ -198,7 +198,7 @@ const PUPITOHomepage = () => {
             const gradientClass = colors[index % colors.length];
             
             return (
-              <Link href="/products" key={label}>
+              <Link href="/shop#collections" key={label}>
                 <motion.div
                   whileHover={{ 
                     y: -5, 
@@ -225,7 +225,7 @@ const PUPITOHomepage = () => {
           <h2 className="text-xl sm:text-2xl font-black text-white">
             FEATURED DROPS
           </h2>
-          <Link href="/products" className="text-sm text-[#1E90FF] underline-offset-2 hover:underline">
+          <Link href="/shop#featured" className="text-sm text-[#1E90FF] underline-offset-2 hover:underline">
             View all
           </Link>
         </div>

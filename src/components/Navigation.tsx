@@ -25,7 +25,7 @@ interface NavigationProps {
 }
 
 const NAV_LINKS = [
-  { label: "Shop", href: "/products", icon: Package },
+  { label: "Shop", href: "/shop", icon: Package },
   { label: "About", href: "/about", icon: HelpCircle },
   { label: "Help", href: "/help/contact", icon: HelpCircle },
   { label: "Account", href: "/account", icon: User },
@@ -114,10 +114,10 @@ export default function Navigation({ currentPath = '', cartCount = 0 }: Navigati
 
           {/* Actions */}
           <div className={styles.actionsContainer}>
-            <Link 
-              href="/products"
+            <Link
+              href="/shop"
               className={styles.actionButton}
-              aria-label="Search products"
+              aria-label="Browse the Pupito shop"
             >
               <Search className={styles.actionIcon} />
             </Link>
