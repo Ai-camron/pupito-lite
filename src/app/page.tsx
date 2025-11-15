@@ -1,25 +1,5 @@
-// import PUPITOHomepage from "@/components/PupitoHomepage";
+import PUPITOHomepage from "@/components/PupitoHomepage";
 
-// Temporary maintenance mode - uncomment above and comment below to restore
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold bg-linear-to-r from-[#FF69B4] to-[#1E90FF] bg-clip-text text-transparent mb-4">
-          PUPITO is Under Maintenance
-        </h1>
-        <p className="text-gray-300 text-lg mb-8">
-          We&apos;re making some awesome updates. Be back soon!
-        </p>
-        <div className="animate-pulse text-[#FFD700]">
-          ⚡ Working on something epic ⚡
-        </div>
-      </div>
-    </div>
-  );
+  return <PUPITOHomepage />;
 }
-
-// Original homepage - uncomment this to restore:
-// export default function Home() {
-//   return <PUPITOHomepage />;
-// }
