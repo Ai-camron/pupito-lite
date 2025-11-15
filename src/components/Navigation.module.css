@@ -1,0 +1,267 @@
+/* PUPITO Navigation Component Styles */
+
+/* Promo Bar */
+.promoBar {
+  width: 100%;
+  background-color: #FF69B4;
+  color: black;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 105, 180, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.1);
+}
+
+.headerContainer {
+  max-width: 72rem;
+  margin: 0 auto;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .headerContainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Logo */
+.logoContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+}
+
+.logoIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brandName {
+  display: none;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(90deg, #ff3ebf, #00a9ff, #ffe949);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 640px) {
+  .brandName {
+    display: inline-block;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease-in-out;
+}
+
+.navLinkActive {
+  color: #FF69B4;
+  background-color: rgba(255, 105, 180, 0.1);
+}
+
+.navLinkInactive {
+  color: white;
+}
+
+.navLinkInactive:hover {
+  color: #FF69B4;
+  background-color: rgba(255, 105, 180, 0.05);
+}
+
+/* Actions */
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.actionButton {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.actionButton:hover {
+  background-color: rgba(255, 105, 180, 0.1);
+}
+
+.actionButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #FF69B4, 0 0 0 4px rgba(255, 105, 180, 0.2);
+}
+
+.actionIcon {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+}
+
+/* Cart Badge */
+.cartContainer {
+  position: relative;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  background-color: #FF69B4;
+  color: black;
+  font-size: 9px;
+  padding: 0.125rem 0.375rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Menu Toggle */
+.mobileMenuToggle {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.15s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuToggle {
+    display: none;
+  }
+}
+
+.mobileMenuToggle:hover {
+  background-color: rgba(255, 105, 180, 0.1);
+}
+
+.mobileMenuToggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #FF69B4, 0 0 0 4px rgba(255, 105, 180, 0.2);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: block;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.95);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileNavContainer {
+  padding: 1rem;
+}
+
+.mobileNavContainer > * + * {
+  margin-top: 0.5rem;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease-in-out;
+}
+
+.mobileNavLinkActive {
+  color: #FF69B4;
+  background-color: rgba(255, 105, 180, 0.1);
+}
+
+.mobileNavLinkInactive {
+  color: white;
+}
+
+.mobileNavLinkInactive:hover {
+  color: #FF69B4;
+  background-color: rgba(255, 105, 180, 0.05);
+}
+
+.mobileNavIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.navIcon {
+  width: 1rem;
+  height: 1rem;
+}

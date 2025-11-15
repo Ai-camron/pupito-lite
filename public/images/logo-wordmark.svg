@@ -1,0 +1,20 @@
+<svg width="320" height="120" viewBox="0 0 640 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-text" x1="0" y1="0" x2="640" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3EBF"/>
+      <stop offset="0.5" stop-color="#00A9FF"/>
+      <stop offset="1" stop-color="#00FFF0"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="240" rx="60" fill="#050505" fill-opacity="0"/>
+  <text x="50%" y="58%" text-anchor="middle" font-family="'Poppins', 'Inter', sans-serif" font-weight="800" font-size="180" letter-spacing="8" fill="url(#grad-text)" filter="url(#glow)">
+    PUPITO
+  </text>
+</svg>

@@ -1,0 +1,42 @@
+{
+  "emails": [
+    "camrondturner@gmail.com",
+    "test@example.com",
+    "test.pupito@example.com",
+    "ryankconnell@gmail.com",
+    "example.demo@pupito.test",
+    "demo@example.com",
+    "brandtest@example.com",
+    "larrya.smith@gmail.com"
+  ],
+  "signups": [
+    {
+      "email": "test@example.com",
+      "date": "2025-11-12T22:31:04.137Z"
+    },
+    {
+      "email": "test.pupito@example.com",
+      "date": "2025-11-13T01:07:44.351Z"
+    },
+    {
+      "email": "ryankconnell@gmail.com",
+      "date": "2025-11-13T01:09:11.176Z"
+    },
+    {
+      "email": "example.demo@pupito.test",
+      "date": "2025-11-13T01:14:42.314Z"
+    },
+    {
+      "email": "demo@example.com",
+      "date": "2025-11-13T01:14:46.955Z"
+    },
+    {
+      "email": "brandtest@example.com",
+      "date": "2025-11-13T01:18:19.938Z"
+    },
+    {
+      "email": "larrya.smith@gmail.com",
+      "date": "2025-11-13T08:02:46.083Z"
+    }
+  ]
+}
