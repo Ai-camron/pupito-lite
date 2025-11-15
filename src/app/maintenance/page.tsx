@@ -1,7 +1,4 @@
-// import PUPITOHomepage from "@/components/PupitoHomepage";
-
-// Temporary maintenance mode - uncomment above and comment below to restore
-export default function Home() {
+export default function MaintenancePage() {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white flex items-center justify-center">
       <div className="text-center">
@@ -16,10 +13,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-// Original homepage - uncomment this to restore:
-// export default function Home() {
-//   return <PUPITOHomepage />;
-// }
