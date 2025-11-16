@@ -14,10 +14,10 @@ const footerLinks = {
     { label: 'Contact', href: '/help/contact' }
   ],
   shop: [
-    { label: 'All Products', href: '/products' },
-    { label: 'New Arrivals', href: '/products' },
-    { label: 'Limited Drops', href: '/products' },
-    { label: 'Gift Cards', href: '/products' }
+    { label: 'All Products', href: '/shop' },
+    { label: 'New Arrivals', href: '/shop#featured' },
+    { label: 'Limited Drops', href: '/shop#collections' },
+    { label: 'Gift Cards', href: '/shop' }
   ]
 }
 
