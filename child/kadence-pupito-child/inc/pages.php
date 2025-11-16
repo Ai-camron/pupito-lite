@@ -96,6 +96,8 @@ function pupito_child_register_pages(): void
             if (!empty($page['set_front'])) {
                 $front_page_id = $page_id;
             }
+        } else {
+            error_log('Failed to create page ' . $page['slug'] . ': ' . $page_id->get_error_message());
         }
     }
 
