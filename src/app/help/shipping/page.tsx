@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Truck, Package, RotateCcw, Shield, Clock, Globe } from "lucide-react";
+import { SUPPORT_EMAIL } from "@/lib/site-info";
+import SeoShortcodeCallout from "@/components/SeoShortcodeCallout";
 
 const PolicySection = ({ icon: Icon, title, children }: {
   icon: React.ElementType;
@@ -156,7 +158,7 @@ export default function ShippingReturnsPage() {
               
               <h3 className="text-lg font-semibold text-[#FFD700] mb-3">How to Report Quality Issues</h3>
               <ol className="space-y-2">
-                <li>1. <strong className="text-white">Contact us immediately</strong> at hello@pupito.com within 30 days of delivery</li>
+                <li>1. <strong className="text-white">Contact us immediately</strong> at {SUPPORT_EMAIL} within 30 days of delivery (online support only)</li>
                 <li>2. <strong className="text-white">Include photos</strong> showing the print or product defect clearly</li>
                 <li>3. <strong className="text-white">Provide order details</strong> including order number and item description</li>
                 <li>4. <strong className="text-white">We&apos;ll review your case</strong> and respond within 24 hours</li>
@@ -226,6 +228,7 @@ export default function ShippingReturnsPage() {
             </Link>
           </div>
         </div>
+        <SeoShortcodeCallout context="shipping and return assurances for online-only orders" />
       </div>
     </div>
   );

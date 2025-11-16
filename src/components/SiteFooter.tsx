@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Instagram, Youtube, Twitter, MessageCircle } from 'lucide-react'
+import { STORE_OVERVIEW, SUPPORT_EMAIL } from '@/lib/site-info'
 
 const footerLinks = {
   about: [
@@ -76,6 +77,15 @@ export default function SiteFooter() {
             {socialIcons.map(({ icon: Icon, label }) => (
               <Icon key={label} className="w-4 h-4 hover:text-[#FF69B4] transition-colors cursor-pointer" />
             ))}
+          </div>
+          <div className="text-white/70 text-sm space-y-1">
+            <p className="font-semibold text-white">Email</p>
+            <p>{SUPPORT_EMAIL}</p>
+            <p className="text-white/70">
+              Online-only store fulfilled by Printful with updates sent through Mailchimp. No phone support or physical retail
+              location.
+            </p>
+            <p className="text-white/60 text-xs">{STORE_OVERVIEW}</p>
           </div>
         </div>
       </div>

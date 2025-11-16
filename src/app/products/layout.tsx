@@ -1,12 +1,19 @@
 import { Metadata } from 'next'
+import { STORE_OVERVIEW, SUPPORT_EMAIL, WOOCOMMERCE_SHORTCODES } from '@/lib/site-info'
 
 export const metadata: Metadata = {
   title: 'Products - PUPITO | Anime Streetwear Collection',
-  description: 'Discover PUPITO\'s premium anime-inspired streetwear. Shop hoodies, t-shirts, caps, and joggers with unique designs, neon aesthetics, and high-quality materials.',
-  keywords: 'anime streetwear, PUPITO, hoodies, t-shirts, caps, joggers, neon, anime fashion, streetwear brand',
+  description:
+    "Discover PUPITO's premium anime-inspired streetwear in an online-only catalog powered by Printful. Shop with the WooCommerce short code " +
+    WOOCOMMERCE_SHORTCODES.shop +
+    ' equivalent and reach us at ' +
+    SUPPORT_EMAIL +
+    ' for support—no physical store or phone required.',
+  keywords: 'anime streetwear, PUPITO, hoodies, t-shirts, caps, joggers, neon, anime fashion, streetwear brand, Printful, online only, ' +
+    SUPPORT_EMAIL,
   openGraph: {
     title: 'Products - PUPITO Anime Streetwear',
-    description: 'Premium anime-inspired streetwear collection with neon aesthetics',
+    description: STORE_OVERVIEW,
     type: 'website',
   },
 }

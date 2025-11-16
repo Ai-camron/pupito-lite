@@ -9,6 +9,7 @@ import {
   Check
 } from 'lucide-react'
 import Link from 'next/link'
+import SeoShortcodeCallout from '@/components/SeoShortcodeCallout'
 
 interface CheckoutStep {
   id: number
@@ -503,6 +504,7 @@ export default function CheckoutPage() {
                   Your payment information is encrypted and secure
                 </p>
               </div>
+              <SeoShortcodeCallout context="secure checkout and payment" />
             </div>
           </motion.div>
         </div>

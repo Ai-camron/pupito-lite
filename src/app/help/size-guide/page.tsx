@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Ruler, Shirt, Users, Info } from "lucide-react";
+import { SUPPORT_EMAIL } from "@/lib/site-info";
+import SeoShortcodeCallout from "@/components/SeoShortcodeCallout";
 
 const sizeData = {
   tees: {
@@ -173,7 +175,7 @@ export default function SizeGuidePage() {
                 <li><strong className="text-white">Relaxed Fit:</strong> Our tees have a comfortable, not-too-tight streetwear vibe</li>
                 <li><strong className="text-white">Oversized Fit:</strong> Hoodies are designed to be roomy for that anime aesthetic</li>
                 <li><strong className="text-white">Size Up:</strong> When in doubt, go bigger for the authentic streetwear look</li>
-                <li><strong className="text-white">Questions?</strong> Hit us up at hello@pupito.com for sizing help!</li>
+                <li><strong className="text-white">Questions?</strong> Hit us up at {SUPPORT_EMAIL} for sizing help! We are an online-only Printful-powered shop with no phone support.</li>
               </ul>
             </div>
           </div>
@@ -255,6 +257,7 @@ export default function SizeGuidePage() {
             Shop Now
           </Link>
         </div>
+        <SeoShortcodeCallout context="size guidance and online-only product education" />
       </div>
     </div>
   );

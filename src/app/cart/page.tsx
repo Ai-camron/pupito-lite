@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  ShoppingCart, 
+import {
+  ShoppingCart,
   Trash2, 
   Plus, 
   Minus, 
@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import SeoShortcodeCallout from '@/components/SeoShortcodeCallout'
 
 interface CartItem {
   id: string
@@ -124,6 +125,7 @@ export default function CartPage() {
               Continue Shopping
               <ArrowRight className="w-5 h-5" />
             </Link>
+            <SeoShortcodeCallout context="holding items with the WooCommerce cart flow" />
           </motion.div>
         </div>
       </div>
@@ -395,6 +397,7 @@ export default function CartPage() {
                 </div>
               </div>
             </div>
+            <SeoShortcodeCallout context="reviewing cart items before checkout" />
           </motion.div>
         </div>
       </div>

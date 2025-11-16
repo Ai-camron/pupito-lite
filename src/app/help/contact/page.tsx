@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Mail, MessageCircle, Clock, Send, Instagram, Youtube, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Chatbot from "@/components/Chatbot";
+import { SUPPORT_EMAIL } from "@/lib/site-info";
+import SeoShortcodeCallout from "@/components/SeoShortcodeCallout";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -95,8 +97,9 @@ export default function ContactPage() {
             <h3 className="text-xl font-bold text-[#FF69B4] mb-2">Email Support</h3>
             <p className="text-gray-400 mb-4">Get help via email</p>
             <div className="space-y-2">
-              <p className="text-sm text-white font-semibold">hello@pupito.com</p>
+              <p className="text-sm text-white font-semibold">{SUPPORT_EMAIL}</p>
               <p className="text-xs text-gray-500">Response within 4 hours</p>
+              <p className="text-xs text-gray-500">Online-only brand fulfilled by Printful—no phone line or physical shop.</p>
             </div>
           </motion.div>
 
@@ -293,10 +296,11 @@ export default function ContactPage() {
             </div>
           </motion.div>
         </div>
+        <SeoShortcodeCallout context="customer support and contact form submissions" />
       </div>
 
       {/* Chatbot */}
-      <Chatbot 
+      <Chatbot
         isOpen={isChatbotOpen} 
         onToggle={() => setIsChatbotOpen(!isChatbotOpen)} 
       />

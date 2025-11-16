@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowLeft, MessageCircle, Mail, Clock } from "lucide-react";
+import { SUPPORT_EMAIL } from "@/lib/site-info";
+import SeoShortcodeCallout from "@/components/SeoShortcodeCallout";
 
 const FAQ_DATA = [
   {
@@ -65,7 +67,7 @@ const FAQ_DATA = [
       },
       {
         q: "How do I report a problem with my order?",
-        a: "Email us at hello@pupito.com within 30 days of delivery with clear photos of any print or product issues. Include your order number and we'll respond within 24 hours with a solution - either a replacement or full refund."
+        a: `Email us at ${SUPPORT_EMAIL} within 30 days of delivery with clear photos of any print or product issues. Include your order number and we'll respond within 24 hours with a solution - either a replacement or full refund for our Printful-fulfilled orders.`
       }
     ]
   },
@@ -207,7 +209,7 @@ export default function FAQPage() {
             <div className="space-y-2">
               <Mail className="w-8 h-8 text-[#00FFFF] mx-auto" />
               <h3 className="font-semibold text-[#00FFFF]">Email Support</h3>
-              <p className="text-sm text-gray-400">hello@pupito.com</p>
+              <p className="text-sm text-gray-400">{SUPPORT_EMAIL}</p>
             </div>
             <div className="space-y-2">
               <Clock className="w-8 h-8 text-[#FFD700] mx-auto" />
@@ -241,6 +243,7 @@ export default function FAQPage() {
             Contact Support
           </Link>
         </div>
+        <SeoShortcodeCallout context="self-serve FAQs for our WooCommerce-style experience" />
       </div>
     </div>
   );

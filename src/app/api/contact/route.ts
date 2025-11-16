@@ -321,7 +321,7 @@ export async function POST(request: NextRequest) {
     } catch (emailError) {
       console.error('Email sending failed:', emailError);
       return NextResponse.json(
-        { error: 'Failed to send message. Please try again or contact us directly at hello@pupito.com' },
+        { error: 'Failed to send message. Please try again or contact us directly at Hello@pupitowear.com' },
         { status: 500 }
       );
     }
