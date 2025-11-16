@@ -8,7 +8,7 @@
 
 define( 'PUPITO_CHILD_VERSION', '1.0.0' );
 
-action_exists( 'add_action' ) || exit;
+function_exists( 'add_action' ) || exit;
 
 add_action( 'wp_enqueue_scripts', function () {
     $parent = 'kadence-style';
