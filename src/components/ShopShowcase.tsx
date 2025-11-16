@@ -366,11 +366,11 @@ const ShopShowcase = () => {
               <motion.article
                 key={collection.id}
                 {...MOTION_VARIANTS.fadeUp}
-                className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-linear-to-br ${collection.colors} p-[1px]`}
+                className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br ${collection.colors} p-[1px]`}
                 aria-labelledby={`collection-${collection.id}`}
               >
                 <div className="relative h-full rounded-[calc(theme(borderRadius.3xl)-4px)] bg-black/80 p-6">
-                  <div className="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-white/10 via-transparent to-transparent" aria-hidden="true" />
+                  <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/10 via-transparent to-transparent" aria-hidden="true" />
                   <header className="relative space-y-2">
                     <p className="text-xs uppercase tracking-[0.4em] text-[#FF69B4]">
                       {collection.tagline}
