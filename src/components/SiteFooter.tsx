@@ -17,7 +17,7 @@ const footerLinks = {
     { label: 'All Products', href: '/shop' },
     { label: 'New Arrivals', href: '/shop#featured' },
     { label: 'Limited Drops', href: '/shop#collections' },
-    { label: 'Gift Cards', href: '/shop#join' }
+    { label: 'Gift Cards', href: '/shop' }
   ]
 }
 
