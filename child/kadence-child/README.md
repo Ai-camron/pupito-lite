@@ -9,7 +9,7 @@ A Kadence child theme packaged for the Pupito storefront. It includes starter pa
 4. Navigate to **Tools → Import → WordPress** and import `content/pupito-kadence-pages.xml`.
    - Assign content to your admin user when prompted.
    - Check the option to **Download and import file attachments** to pull hero and product art placeholders.
-5. Set **Home** as the static front page and assign the **Shop** page to WooCommerce if you use it.
+5. Go to **Settings → Reading**. Under 'Homepage settings', select **A static page**, then choose **Home** as the homepage. Assign the **Shop** page to WooCommerce if you use it.
 
 ## Notes
 - The child theme enqueues the Kadence parent stylesheet automatically.
