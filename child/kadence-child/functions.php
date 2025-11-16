@@ -11,7 +11,7 @@ define( 'PUPITO_CHILD_VERSION', '1.0.0' );
 function_exists( 'add_action' ) || exit;
 
 add_action( 'wp_enqueue_scripts', function () {
-    $parent = 'kadence-style';
+    $parent = 'kadence-global';
     wp_enqueue_style( $parent, get_template_directory_uri() . '/style.css', [], wp_get_theme('kadence')->get('Version') );
     wp_enqueue_style(
         'pupito-kadence-child',
