@@ -42,8 +42,35 @@ test('store benefits section is labelled for assistive technology', () => {
   })
 })
 
+test('lookbook gallery and craft spotlight include descriptive content', () => {
+  ;[
+    'Two friends in neon hoodies under city lights sharing street food',
+    'Pupito joggers styled with gaming arcade cabinets in the background',
+    'Creator recording in a studio wearing a neon gradient tee',
+    'Athlete stretching on a rooftop in a cap and hoodie at sunrise'
+  ].forEach((altText) => {
+    assert.ok(source.includes(`alt: \"${altText}\"`), `Lookbook entry missing alt text for ${altText}`)
+  })
+
+  ;['Fulfillment', 'Shipping ETA', 'Craft & Care', 'Support'].forEach((label) => {
+    assert.ok(source.includes(`label: \"${label}\"`), `Craft highlight label missing for ${label}`)
+  })
+})
+
+test('shop FAQ communicates key support policies', () => {
+  ;[
+    'When will I get my order?',
+    'How are Pupito products made?',
+    'What if something arrives damaged?',
+    'Do you offer returns or exchanges?',
+    'Can I track my order?'
+  ].forEach((question) => {
+    assert.ok(source.includes(`question: \"${question}\"`), `FAQ entry missing for ${question}`)
+  })
+})
+
 test('shop sections expose anchors for navigation shortcuts', () => {
-  ;['hero', 'collections', 'featured', 'benefits', 'join'].forEach((anchor) => {
+  ;['hero', 'collections', 'featured', 'lookbook', 'craft', 'benefits', 'faq', 'join'].forEach((anchor) => {
     assert.match(source, new RegExp(`id=\\"${anchor}\\"`), `Section should expose id="${anchor}"`)
   })
 })

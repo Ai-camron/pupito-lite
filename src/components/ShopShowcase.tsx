@@ -33,6 +33,27 @@ type CollectionHighlight = {
   description: string;
 };
 
+type LookbookSpread = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+};
+
+type CraftHighlight = {
+  id: number;
+  label: string;
+  value: string;
+  detail: string;
+};
+
+type ShopFaq = {
+  id: number;
+  question: string;
+  answer: string;
+};
+
 type StoreBenefit = {
   id: number;
   icon: ElementType;
@@ -130,6 +151,97 @@ const BENEFITS: StoreBenefit[] = [
   },
 ];
 
+const LOOKBOOK_SPREADS: LookbookSpread[] = [
+  {
+    id: 1,
+    title: "Night Market Neon",
+    description: "Reflective inks and prism gradients glow under subway lights after the late show.",
+    image: "/images/placeholder-hoodie.svg",
+    alt: "Two friends in neon hoodies under city lights sharing street food",
+  },
+  {
+    id: 2,
+    title: "Arcade Rivals",
+    description: "Match joggers and caps tuned for high-score marathons and quick dash animations.",
+    image: "/images/placeholder-joggers.svg",
+    alt: "Pupito joggers styled with gaming arcade cabinets in the background",
+  },
+  {
+    id: 3,
+    title: "Studio Glow",
+    description: "Breathable tees and crop layers built for creators filming neon-lit edits and reels.",
+    image: "/images/placeholder-tee.svg",
+    alt: "Creator recording in a studio wearing a neon gradient tee",
+  },
+  {
+    id: 4,
+    title: "Sunrise Cooldown",
+    description: "Earth-minded fleece and recycled inks for morning cooldowns on rooftops and parks.",
+    image: "/images/placeholder-cap.svg",
+    alt: "Athlete stretching on a rooftop in a cap and hoodie at sunrise",
+  },
+];
+
+const CRAFT_HIGHLIGHTS: CraftHighlight[] = [
+  {
+    id: 1,
+    label: "Fulfillment",
+    value: "3–7 days",
+    detail: "On-demand production with global partners keeps waste low while speeding up delivery windows.",
+  },
+  {
+    id: 2,
+    label: "Shipping ETA",
+    value: "3–20 days",
+    detail: "Regional hubs ship closest to you: 3–4 days in the US, up to 20 days for international routes.",
+  },
+  {
+    id: 3,
+    label: "Craft & Care",
+    value: "Recycled inks",
+    detail: "Vibrant color with lower environmental impact, paired with quality checks on every batch.",
+  },
+  {
+    id: 4,
+    label: "Support",
+    value: "24/7 crew",
+    detail: "Email support@pupito.club with order numbers, sizing help, or exchange questions anytime.",
+  },
+];
+
+const SHOP_FAQ: ShopFaq[] = [
+  {
+    id: 1,
+    question: "When will I get my order?",
+    answer:
+      "Most orders are fulfilled in 3–7 days, then ship out. US deliveries land in 3–4 business days; international routes can take 10–20 days depending on customs.",
+  },
+  {
+    id: 2,
+    question: "How are Pupito products made?",
+    answer:
+      "We partner with on-demand production studios worldwide so your gear prints and ships from the facility that can complete it most efficiently.",
+  },
+  {
+    id: 3,
+    question: "What if something arrives damaged?",
+    answer:
+      "Email support@pupito.club within a week with your order number and photos. We replace wrong or damaged items fast.",
+  },
+  {
+    id: 4,
+    question: "Do you offer returns or exchanges?",
+    answer:
+      "Because each piece is made on demand we don’t process returns or exchanges, but we’ll fix any issue with incorrect or damaged items right away.",
+  },
+  {
+    id: 5,
+    question: "Can I track my order?",
+    answer:
+      "Yes—once your package ships, you’ll receive a tracking link via email so you can follow it home.",
+  },
+];
+
 const MOTION_VARIANTS = {
   fadeUp: {
     initial: { opacity: 0, y: 24 },
@@ -213,7 +325,7 @@ const ShopShowcase = () => {
                       className="rounded-xl border border-white/10"
                     />
                     <div>
-                    <p className="text-sm uppercase tracking-wider text-[#00FFFF]">Tonight&apos;s Highlight</p>
+                      <p className="text-sm uppercase tracking-wider text-[#00FFFF]">Tonight&apos;s Highlight</p>
                       <p className="text-lg font-semibold">Galaxy Arc Tee</p>
                       <p className="text-sm text-gray-300">Members unlock pre-release colorways + loyalty XP.</p>
                     </div>
@@ -346,6 +458,82 @@ const ShopShowcase = () => {
       </section>
 
       <section
+        id="lookbook"
+        aria-labelledby="lookbook-heading"
+        className="border-b border-white/5 bg-[#0B0B0F]"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
+          <motion.div {...MOTION_VARIANTS.fadeUp} className="text-center max-w-3xl mx-auto">
+            <h2 id="lookbook-heading" className="text-3xl sm:text-4xl font-black">
+              Pupito Pack Lookbook
+            </h2>
+            <p className="mt-3 text-gray-300">
+              Scenes from the community—night market meetups, arcade battles, sunrise cool-downs, and neon-lit studios.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {LOOKBOOK_SPREADS.map((spread) => (
+              <motion.figure
+                key={spread.id}
+                {...MOTION_VARIANTS.fadeUp}
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]"
+              >
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src={spread.image}
+                    alt={spread.alt}
+                    fill
+                    sizes="(min-width: 1280px) 260px, (min-width: 768px) 45vw, 100vw"
+                    className="object-contain p-6"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/40" aria-hidden="true" />
+                </div>
+                <figcaption className="space-y-2 p-6">
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#FF69B4]">Community fit #{spread.id}</p>
+                  <h3 className="text-lg font-semibold text-white">{spread.title}</h3>
+                  <p className="text-sm text-gray-300">{spread.description}</p>
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="craft"
+        aria-labelledby="craft-heading"
+        className="border-b border-white/5 bg-black/60"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <motion.div {...MOTION_VARIANTS.fadeUp} className="text-center max-w-3xl mx-auto">
+            <h2 id="craft-heading" className="text-3xl sm:text-4xl font-black">
+              Crafted with Care, Delivered at Pace
+            </h2>
+            <p className="mt-3 text-gray-300">
+              Transparent timelines, recycled inks, and responsive support keep every Pupito drop accountable.
+            </p>
+          </motion.div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4" role="list" aria-label="Craft and sustainability highlights">
+            {CRAFT_HIGHLIGHTS.map((highlight) => (
+              <motion.article
+                key={highlight.id}
+                {...MOTION_VARIANTS.fadeUp}
+                role="listitem"
+                className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6"
+              >
+                <div className="absolute inset-0 bg-linear-to-br from-[#1E90FF]/15 via-transparent to-[#FF69B4]/15" aria-hidden="true" />
+                <div className="relative space-y-3">
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#FFD700]">{highlight.label}</p>
+                  <h3 className="text-2xl font-bold text-white">{highlight.value}</h3>
+                  <p className="text-sm text-gray-300">{highlight.detail}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
         id="benefits"
         aria-labelledby="benefits-heading"
         className="bg-[#050505]"
@@ -377,6 +565,33 @@ const ShopShowcase = () => {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        aria-labelledby="faq-heading"
+        className="border-t border-b border-white/10 bg-[#0D0D12]"
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
+          <motion.div {...MOTION_VARIANTS.fadeUp} className="text-center">
+            <h2 id="faq-heading" className="text-3xl sm:text-4xl font-black">Pupito Shop FAQ</h2>
+            <p className="mt-3 text-gray-300">Shipping windows, craft details, and support policies inspired by our Printful partners.</p>
+          </motion.div>
+          <div className="space-y-4" role="list" aria-label="Shop frequently asked questions">
+            {SHOP_FAQ.map((faq) => (
+              <motion.details
+                key={faq.id}
+                {...MOTION_VARIANTS.fadeUp}
+                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+              >
+                <summary className="cursor-pointer text-left text-lg font-semibold text-white">
+                  {faq.question}
+                </summary>
+                <p className="mt-3 text-sm text-gray-300 leading-relaxed">{faq.answer}</p>
+              </motion.details>
+            ))}
           </div>
         </div>
       </section>
