@@ -2,7 +2,7 @@
 /**
  * Pupito Kadence Child Theme functions.
  *
- * Enqueues parent + child styles, registers a JSON translation catalog, and
+ * Enqueues parent + child styles, registers a text domain for translations, and
  * exposes a helper to make importing starter content predictable.
  */
 
