@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PUPITO Kadence Child 1.0.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: inc/pages.php:18
+msgid "PUPITO Home"
+msgstr ""
+
+#: inc/pages.php:24
+msgid "Shop"
+msgstr ""
+
+#: inc/pages.php:30
+msgid "About PUPITO"
+msgstr ""
+
+#: inc/pages.php:36
+msgid "Contact"
+msgstr ""
+
+#: inc/pages.php:42
+msgid "Inicio"
+msgstr ""
+
+#: inc/pages.php:48
+msgid "Tienda"
+msgstr ""
+
+#: inc/pages.php:54
+msgid "Sobre PUPITO"
+msgstr ""
+
+#: inc/pages.php:60
+msgid "Contacto"
+msgstr ""
