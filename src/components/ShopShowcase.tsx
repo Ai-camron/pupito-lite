@@ -280,10 +280,10 @@ const ShopShowcase = () => {
                 Streetwear tuned for anime dreamers. Layer neon gradients, magnetic textures, and story-coded silhouettes for every late-night arc.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild className="bg-linear-to-r from-[#1E90FF] to-[#00FFFF] hover:from-[#FFD700] hover:to-[#FF69B4] hover:text-black text-white font-semibold rounded-xl px-6 py-3 shadow-[0_0_20px_rgba(30,144,255,0.4)]">
+                <Button asChild className="bg-gradient-to-r from-[#1E90FF] to-[#00FFFF] hover:from-[#FFD700] hover:to-[#FF69B4] hover:text-black text-white font-semibold rounded-xl px-6 py-3 shadow-[0_0_20px_rgba(30,144,255,0.4)]">
                   <Link href="/checkout">Secure Checkout</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-2 border-[#FF69B4] bg-transparent text-[#FF69B4] hover:bg-linear-to-r hover:from-[#FF6B6B] hover:to-[#FF1493] hover:text-black hover:border-[#FF1493] rounded-xl px-6 py-3">
+                <Button asChild variant="outline" className="border-2 border-[#FF69B4] bg-transparent text-[#FF69B4] hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:to-[#FF1493] hover:text-black hover:border-[#FF1493] rounded-xl px-6 py-3">
                   <Link href="#collections">Browse Collections</Link>
                 </Button>
               </div>
