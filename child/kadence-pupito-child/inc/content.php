@@ -162,7 +162,7 @@ function pupito_child_contact_content_es(): string
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Escríbenos a <a href="mailto:hola@pupito.example.com">hola@pupito.example.com</a> para mayoreo, colaboraciones o soporte.</p>
+<p>Escríbenos a <a href="mailto:hello@pupito.example.com">hello@pupito.example.com</a> para mayoreo, colaboraciones o soporte.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
