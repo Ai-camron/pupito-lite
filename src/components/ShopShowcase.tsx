@@ -611,7 +611,7 @@ const ShopShowcase = () => {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
                 asChild
-                className="rounded-xl bg-linear-to-r from-[#FF69B4] via-[#FF1493] to-[#8A2BE2] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(255,105,180,0.35)] hover:from-[#FFD700] hover:via-[#FF69B4] hover:to-[#1E90FF] hover:text-black"
+                className="rounded-xl bg-gradient-to-r from-[#FF69B4] via-[#FF1493] to-[#8A2BE2] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(255,105,180,0.35)] hover:from-[#FFD700] hover:via-[#FF69B4] hover:to-[#1E90FF] hover:text-black"
               >
                 <Link href="/login">Join the Pack</Link>
               </Button>
