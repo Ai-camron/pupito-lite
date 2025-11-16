@@ -12,7 +12,7 @@ function_exists( 'add_action' ) || exit;
 
 add_action( 'wp_enqueue_scripts', function () {
     $parent = 'kadence-style';
-    wp_enqueue_style( $parent, get_template_directory_uri() . '/style.css', [], PUPITO_CHILD_VERSION );
+    wp_enqueue_style( $parent, get_template_directory_uri() . '/style.css', [], wp_get_theme('kadence')->get('Version') );
     wp_enqueue_style(
         'pupito-kadence-child',
         get_stylesheet_directory_uri() . '/style.css',
