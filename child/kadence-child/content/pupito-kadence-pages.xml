@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Hand-crafted WXR-compatible starter content for Pupito Kadence child theme -->
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/">
+
+<channel>
+    <title>Pupito Kadence Starter</title>
+    <link>https://pupito.example.com</link>
+    <language>en</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://pupito.example.com</wp:base_site_url>
+    <wp:base_blog_url>https://pupito.example.com</wp:base_blog_url>
+
+    <wp:author>
+        <wp:author_id>1</wp:author_id>
+        <wp:author_login><![CDATA[pupito-admin]]></wp:author_login>
+        <wp:author_email><![CDATA[admin@pupito.example.com]]></wp:author_email>
+        <wp:author_display_name><![CDATA[Pupito Admin]]></wp:author_display_name>
+        <wp:author_first_name><![CDATA[Pupito]]></wp:author_first_name>
+        <wp:author_last_name><![CDATA[Admin]]></wp:author_last_name>
+    </wp:author>
+
+    <!-- HOME (EN) -->
+    <item>
+        <title>Home</title>
+        <link>https://pupito.example.com/</link>
+        <pubDate>Mon, 06 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1000</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Wear Your Story</h1>
+            <p>Anime apparel for every arc of you — now in midnight mode. Explore neon gradients, hero blues, and hot pink overlays that mirror the Pupito storefront.</p>
+            <p><a href="/shop">Shop Now</a> or <a href="/shop#collections">View Collections</a></p>
+            <h2>Shop by Category</h2>
+            <ul>
+                <li>Tees</li>
+                <li>Hoodies</li>
+                <li>Joggers</li>
+                <li>Accessories</li>
+                <li>Stickers</li>
+                <li>Limited Drops</li>
+            </ul>
+            <h2>Featured</h2>
+            <ul>
+                <li>Galaxy Arc Tee — $34 (New)</li>
+                <li>Neon Kitsune Hoodie — $62 (Fan Favorite)</li>
+                <li>Hero Runner Joggers — $54 (Trending)</li>
+                <li>Pixel Pup Cap — $26 (New)</li>
+            </ul>
+            <h2>Testimonials</h2>
+            <p><strong>Kai / @ArcRunner:</strong> "Wearing it feels like walking through Tokyo at night — electric, alive, cinematic."</p>
+            <p><strong>Mika / @SakuraSketch:</strong> "The Neon Kitsune hoodie glows under club lights. It's streetwear and story in one."</p>
+            <h2>Newsletter</h2>
+            <p>Join the drop list for limited editions and collabs. Our newsletter integrates with the Pupito signup flow.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Pupito homepage starter layout with hero, categories, featured items, testimonials, and newsletter CTA.]]></excerpt:encoded>
+        <wp:post_id>1000</wp:post_id>
+        <wp:post_date>2025-01-06 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>home</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- HOME (ES) -->
+    <item>
+        <title>Inicio</title>
+        <link>https://pupito.example.com/es/inicio</link>
+        <pubDate>Mon, 06 Jan 2025 12:05:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1001</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Viste Tu Historia</h1>
+            <p>Moda inspirada en el anime para cada etapa de tu aventura. Gradientes neón, azules heroicos y rosas intensos replican la experiencia de Pupito.</p>
+            <p><a href="/shop">Comprar ahora</a> o <a href="/shop#collections">Ver colecciones</a></p>
+            <h2>Categorías</h2>
+            <ul>
+                <li>Camisetas</li>
+                <li>Sudaderas</li>
+                <li>Joggers</li>
+                <li>Accesorios</li>
+                <li>Pegatinas</li>
+                <li>Ediciones Limitadas</li>
+            </ul>
+            <h2>Destacados</h2>
+            <ul>
+                <li>Camiseta Galaxy Arc — $34 (Nuevo)</li>
+                <li>Sudadera Neon Kitsune — $62 (Favorita)</li>
+                <li>Joggers Hero Runner — $54 (Tendencia)</li>
+                <li>Gorra Pixel Pup — $26 (Nuevo)</li>
+            </ul>
+            <h2>Testimonios</h2>
+            <p><strong>Kai / @ArcRunner:</strong> "Es como caminar por Tokio de noche: eléctrico, vivo, cinematográfico."</p>
+            <p><strong>Mika / @SakuraSketch:</strong> "La sudadera Neon Kitsune brilla en el club. Es streetwear con historia."</p>
+            <h2>Boletín</h2>
+            <p>Únete a la lista para ediciones limitadas y colaboraciones. Compatible con el flujo de registro de Pupito.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Inicio en español con el mismo layout que la página principal de Pupito.]]></excerpt:encoded>
+        <wp:post_id>1001</wp:post_id>
+        <wp:post_date>2025-01-06 12:05:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:05:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>inicio</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- SHOP (EN) -->
+    <item>
+        <title>Shop</title>
+        <link>https://pupito.example.com/shop</link>
+        <pubDate>Mon, 06 Jan 2025 12:10:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1002</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Shop Pupito</h1>
+            <p>Browse core collections, limited drops, and accessories. The layout is ready for WooCommerce or static content blocks.</p>
+            <p>Use Kadence row layouts for product grids and add hero art via cover blocks.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Starter shop page ready to map to WooCommerce.]]></excerpt:encoded>
+        <wp:post_id>1002</wp:post_id>
+        <wp:post_date>2025-01-06 12:10:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:10:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>shop</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- SHOP (ES) -->
+    <item>
+        <title>Tienda</title>
+        <link>https://pupito.example.com/es/tienda</link>
+        <pubDate>Mon, 06 Jan 2025 12:12:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1003</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Tienda Pupito</h1>
+            <p>Explora colecciones básicas, lanzamientos limitados y accesorios. Estructura lista para WooCommerce o bloques estáticos.</p>
+            <p>Usa filas de Kadence para cuadrículas de productos y añade arte heroico con bloques de portada.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Página de tienda en español preparada para WooCommerce.]]></excerpt:encoded>
+        <wp:post_id>1003</wp:post_id>
+        <wp:post_date>2025-01-06 12:12:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:12:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>tienda</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- ABOUT (EN) -->
+    <item>
+        <title>About</title>
+        <link>https://pupito.example.com/about</link>
+        <pubDate>Mon, 06 Jan 2025 12:15:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1004</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>About Pupito</h1>
+            <p>Pupito blends anime storytelling with streetwear silhouettes. This page summarizes the brand story and production standards.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Brand story page.]]></excerpt:encoded>
+        <wp:post_id>1004</wp:post_id>
+        <wp:post_date>2025-01-06 12:15:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:15:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>about</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- ABOUT (ES) -->
+    <item>
+        <title>Acerca de</title>
+        <link>https://pupito.example.com/es/acerca-de</link>
+        <pubDate>Mon, 06 Jan 2025 12:16:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1005</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Sobre Pupito</h1>
+            <p>Pupito combina narrativas de anime con siluetas de streetwear. Esta página resume la historia de la marca y los estándares de producción.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Versión en español de la página de marca.]]></excerpt:encoded>
+        <wp:post_id>1005</wp:post_id>
+        <wp:post_date>2025-01-06 12:16:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:16:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>acerca-de</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- HELP (EN) -->
+    <item>
+        <title>Help</title>
+        <link>https://pupito.example.com/help</link>
+        <pubDate>Mon, 06 Jan 2025 12:18:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1006</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Help Center</h1>
+            <p>FAQs for sizing, shipping, returns, and preorder drops. Use Kadence accordions or tabs for structured support content.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Help center starter content.]]></excerpt:encoded>
+        <wp:post_id>1006</wp:post_id>
+        <wp:post_date>2025-01-06 12:18:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:18:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>help</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+
+    <!-- HELP (ES) -->
+    <item>
+        <title>Ayuda</title>
+        <link>https://pupito.example.com/es/ayuda</link>
+        <pubDate>Mon, 06 Jan 2025 12:19:00 +0000</pubDate>
+        <dc:creator><![CDATA[pupito-admin]]></dc:creator>
+        <guid isPermaLink="false">https://pupito.example.com/?page_id=1007</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <h1>Centro de Ayuda</h1>
+            <p>Preguntas frecuentes sobre tallas, envíos, devoluciones y preventas. Usa acordeones o pestañas de Kadence para organizar el soporte.</p>
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[Soporte en español.]]></excerpt:encoded>
+        <wp:post_id>1007</wp:post_id>
+        <wp:post_date>2025-01-06 12:19:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-06 12:19:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>ayuda</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>page</wp:post_type>
+    </item>
+</channel>
+</rss>
