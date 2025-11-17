@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowLeft, MessageCircle, Mail, Clock } from "lucide-react";
+import { STORE_CONTACT } from "@/lib/constants";
+import OnlineStoreCallout from "@/components/OnlineStoreCallout";
 
 const FAQ_DATA = [
   {
@@ -65,7 +67,7 @@ const FAQ_DATA = [
       },
       {
         q: "How do I report a problem with my order?",
-        a: "Email us at hello@pupito.com within 30 days of delivery with clear photos of any print or product issues. Include your order number and we'll respond within 24 hours with a solution - either a replacement or full refund."
+        a: `Email us at ${STORE_CONTACT.email} within 30 days of delivery with clear photos of any print or product issues. Include your order number and we'll respond within 24 hours with a solution - either a replacement or full refund.`
       }
     ]
   },
@@ -207,12 +209,12 @@ export default function FAQPage() {
             <div className="space-y-2">
               <Mail className="w-8 h-8 text-[#00FFFF] mx-auto" />
               <h3 className="font-semibold text-[#00FFFF]">Email Support</h3>
-              <p className="text-sm text-gray-400">hello@pupito.com</p>
+              <p className="text-sm text-gray-400">{STORE_CONTACT.email}</p>
             </div>
             <div className="space-y-2">
               <Clock className="w-8 h-8 text-[#FFD700] mx-auto" />
               <h3 className="font-semibold text-[#FFD700]">Response Time</h3>
-              <p className="text-sm text-gray-400">Usually within 4 hours</p>
+              <p className="text-sm text-gray-400">{STORE_CONTACT.responseTime}</p>
             </div>
           </div>
         </div>
@@ -240,6 +242,11 @@ export default function FAQPage() {
           >
             Contact Support
           </Link>
+        </div>
+
+        {/* Online Store Info */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <OnlineStoreCallout variant="compact" />
         </div>
       </div>
     </div>
