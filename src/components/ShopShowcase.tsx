@@ -210,7 +210,7 @@ const CRAFT_HIGHLIGHTS: CraftHighlight[] = [
   },
 ];
 
-const SHOP_FAQ: ShopFaq[] = [
+export const SHOP_FAQ: ShopFaq[] = [
   {
     id: 1,
     question: "When will I get my order?",
@@ -240,6 +240,18 @@ const SHOP_FAQ: ShopFaq[] = [
     question: "Can I track my order?",
     answer:
       "Yes—once your package ships, you’ll receive a tracking link via email so you can follow it home.",
+  },
+  {
+    id: 6,
+    question: "How do I find the right size?",
+    answer:
+      "Each product page includes a detailed size chart with measurements in inches and centimeters. Our fits run true to size, but if you prefer an oversized look, we recommend sizing up one.",
+  },
+  {
+    id: 7,
+    question: "Do you have a loyalty or rewards program?",
+    answer:
+      "Yes! Join the Pup Squad to earn loyalty XP on every purchase. Members get early access to limited drops, exclusive colorways, and double points on seasonal collaborations.",
   },
 ];
 
