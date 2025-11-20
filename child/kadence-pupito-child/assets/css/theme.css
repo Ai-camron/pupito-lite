@@ -1,0 +1,13 @@
+/* Child theme-specific accents */
+body {
+  line-height: 1.7;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  border-color: var(--pupito-neon-pink);
+  color: var(--pupito-neon-pink);
+}
+
+.wp-block-separator {
+  border-color: var(--pupito-hero-blue);
+}
