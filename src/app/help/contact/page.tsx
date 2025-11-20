@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Mail, MessageCircle, Clock, Send, Instagram, Youtube, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Chatbot from "@/components/Chatbot";
+import { STORE_CONTACT } from "@/lib/constants";
+import OnlineStoreCallout from "@/components/OnlineStoreCallout";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -95,8 +97,8 @@ export default function ContactPage() {
             <h3 className="text-xl font-bold text-[#FF69B4] mb-2">Email Support</h3>
             <p className="text-gray-400 mb-4">Get help via email</p>
             <div className="space-y-2">
-              <p className="text-sm text-white font-semibold">hello@pupito.com</p>
-              <p className="text-xs text-gray-500">Response within 4 hours</p>
+              <p className="text-sm text-white font-semibold">{STORE_CONTACT.email}</p>
+              <p className="text-xs text-gray-500">{STORE_CONTACT.responseTime}</p>
             </div>
           </motion.div>
 
@@ -241,7 +243,7 @@ export default function ContactPage() {
               <div className="space-y-4 text-gray-300">
                 <div>
                   <h3 className="font-semibold text-white mb-2">Support Hours</h3>
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM PST<br />Saturday - Sunday: 10:00 AM - 4:00 PM PST</p>
+                  <p>{STORE_CONTACT.supportHours}<br />Saturday - Sunday: 10:00 AM - 4:00 PM PST</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-white mb-2">Follow the Squad</h3>
@@ -292,6 +294,11 @@ export default function ContactPage() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Online Store Info */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <OnlineStoreCallout variant="compact" />
         </div>
       </div>
 

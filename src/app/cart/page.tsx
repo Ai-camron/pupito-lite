@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import OnlineStoreCallout from '@/components/OnlineStoreCallout'
 
 interface CartItem {
   id: string
@@ -396,6 +397,11 @@ export default function CartPage() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Online Store Info */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <OnlineStoreCallout variant="compact" />
         </div>
       </div>
     </div>

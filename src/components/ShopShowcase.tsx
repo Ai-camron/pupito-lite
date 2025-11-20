@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import OnlineStoreCallout from "@/components/OnlineStoreCallout";
 
 type FeaturedProduct = {
   id: number;
@@ -593,6 +594,12 @@ const ShopShowcase = () => {
               </motion.details>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#0D0D0D]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <OnlineStoreCallout />
         </div>
       </section>
 

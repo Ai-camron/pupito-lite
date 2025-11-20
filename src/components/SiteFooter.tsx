@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Instagram, Youtube, Twitter, MessageCircle } from 'lucide-react'
+import { STORE_CONTACT, STORE_INFO } from '@/lib/constants'
 
 const footerLinks = {
   about: [
@@ -81,11 +82,18 @@ export default function SiteFooter() {
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-white/50">
         <div>© {new Date().getFullYear()} PUPITO. All rights reserved.</div>
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
           <span>Privacy</span>
           <span>Terms</span>
           <span>Accessibility</span>
+          <span className="hidden sm:inline">•</span>
+          <span className="text-white/70">Contact: {STORE_CONTACT.email}</span>
         </div>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 text-center">
+        <p className="text-xs text-white/40">
+          Fulfillment by {STORE_INFO.fulfillmentPartner} • Newsletter powered by {STORE_INFO.emailProvider}
+        </p>
       </div>
     </footer>
   )
