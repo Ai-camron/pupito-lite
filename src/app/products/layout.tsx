@@ -1,14 +1,21 @@
 import { Metadata } from 'next'
+import { SEO_METADATA, STORE_INFO } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Products - PUPITO | Anime Streetwear Collection',
-  description: 'Discover PUPITO\'s premium anime-inspired streetwear. Shop hoodies, t-shirts, caps, and joggers with unique designs, neon aesthetics, and high-quality materials.',
-  keywords: 'anime streetwear, PUPITO, hoodies, t-shirts, caps, joggers, neon, anime fashion, streetwear brand',
+  title: SEO_METADATA.products.title,
+  description: SEO_METADATA.products.description,
+  keywords: SEO_METADATA.products.keywords,
   openGraph: {
-    title: 'Products - PUPITO Anime Streetwear',
-    description: 'Premium anime-inspired streetwear collection with neon aesthetics',
+    title: SEO_METADATA.products.title,
+    description: SEO_METADATA.products.description,
     type: 'website',
+    siteName: STORE_INFO.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: SEO_METADATA.products.title,
+    description: SEO_METADATA.products.description,
+  }
 }
 
 export default function ProductsLayout({
@@ -26,7 +33,7 @@ export default function ProductsLayout({
             "@type": "CollectionPage",
             "name": "PUPITO Anime Streetwear Collection",
             "description": "Premium anime-inspired streetwear including hoodies, t-shirts, caps, and joggers",
-            "url": "https://pupito.com/products",
+            "url": `${STORE_INFO.url}/products`,
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [
@@ -34,13 +41,13 @@ export default function ProductsLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://pupito.com"
+                  "item": STORE_INFO.url
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Products",
-                  "item": "https://pupito.com/products"
+                  "item": `${STORE_INFO.url}/products`
                 }
               ]
             },

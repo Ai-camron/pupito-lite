@@ -9,6 +9,7 @@ import {
   Check
 } from 'lucide-react'
 import Link from 'next/link'
+import OnlineStoreCallout from '@/components/OnlineStoreCallout'
 
 interface CheckoutStep {
   id: number
@@ -505,6 +506,11 @@ export default function CheckoutPage() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Online Store Info */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <OnlineStoreCallout variant="compact" />
         </div>
       </div>
     </div>
