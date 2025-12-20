@@ -1,0 +1,42 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="80" x2="1300" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0B0F"/>
+      <stop offset="1" stop-color="#0F1018"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FF69B4"/>
+      <stop offset="1" stop-color="#FF1493"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="1" y1="0" x2="0" y2="1">
+      <stop stop-color="#00FFFF"/>
+      <stop offset="1" stop-color="#1E90FF"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#FF6B6B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <rect x="120" y="120" width="1200" height="660" rx="56" fill="#0E0E14" stroke="#1E90FF" stroke-width="6" opacity="0.65"/>
+  <circle cx="360" cy="420" r="220" fill="url(#blue)" opacity="0.16"/>
+  <circle cx="1080" cy="420" r="220" fill="url(#pink)" opacity="0.13"/>
+  <g opacity="0.3" stroke="#FFFFFF" stroke-width="1">
+    <path d="M200 200h1040M200 300h1040M200 400h1040M200 500h1040M200 600h1040"/>
+    <path d="M320 160v600M560 160v600M880 160v600M1120 160v600"/>
+  </g>
+  <rect x="240" y="210" width="320" height="520" rx="28" fill="#13161F" stroke="url(#pink)" stroke-width="4" transform="rotate(-4 240 210)"/>
+  <rect x="560" y="200" width="320" height="520" rx="28" fill="#10141C" stroke="url(#gold)" stroke-width="4"/>
+  <rect x="880" y="210" width="320" height="520" rx="28" fill="#11131D" stroke="url(#blue)" stroke-width="4" transform="rotate(4 880 210)"/>
+  <text x="720" y="160" text-anchor="middle" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="42" font-weight="800" letter-spacing="0.12em">PUPITO LOOKBOOK</text>
+  <text x="720" y="198" text-anchor="middle" fill="#FFD700" font-family="Inter, 'Segoe UI', system-ui" font-size="16" letter-spacing="0.32em">STREETWEAR STORIES</text>
+  <path d="M320 310c20-46 70-70 126-54 56 16 88 70 72 126-18 62-80 96-152 70" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1010 310c-20-46-70-70-126-54-56 16-88 70-72 126 18 62 80 96 152 70" stroke="url(#blue)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M640 286c12-46 54-80 104-80 58 0 106 48 106 106 0 52-36 98-84 106" stroke="url(#pink)" stroke-width="12" stroke-linecap="round"/>
+  <text x="400" y="698" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="18" font-weight="700" letter-spacing="0.08em">Arc Runner Tee</text>
+  <text x="710" y="698" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="18" font-weight="700" letter-spacing="0.08em">Neon Kitsune Hoodie</text>
+  <text x="1020" y="698" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="18" font-weight="700" letter-spacing="0.08em">Hero Runner Joggers</text>
+  <text x="400" y="720" fill="#FFD700" font-family="Inter, 'Segoe UI', system-ui" font-size="13" letter-spacing="0.18em">LIMITED DROP</text>
+  <text x="710" y="720" fill="#00FFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="13" letter-spacing="0.18em">GLOW EDITION</text>
+  <text x="1020" y="720" fill="#FF69B4" font-family="Inter, 'Segoe UI', system-ui" font-size="13" letter-spacing="0.18em">RUNNER PACK</text>
+</svg>
