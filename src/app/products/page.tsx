@@ -5,14 +5,14 @@ import { motion } from 'framer-motion'
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D]">
-      <div className="bg-linear-to-r from-[#FF69B4]/20 via-[#1E90FF]/20 to-[#FFD700]/20 border-b border-[#FF69B4]/30">
+      <div className="bg-linear-to-r from-[#22d3ee]/20 via-[#1E90FF]/20 to-[#FFD700]/20 border-b border-[#22d3ee]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#FF69B4] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#22d3ee] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
               Products
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">

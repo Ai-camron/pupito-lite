@@ -66,15 +66,15 @@ const SizeTable = ({ data }: {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#FF69B4]/20 rounded-2xl overflow-hidden backdrop-blur"
+      className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#22d3ee]/20 rounded-2xl overflow-hidden backdrop-blur"
     >
       {/* Header */}
-      <div className="p-6 border-b border-[#FF69B4]/20">
+      <div className="p-6 border-b border-[#22d3ee]/20">
         <div className="flex items-center gap-3 mb-3">
-          <div className="p-2 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-lg">
+          <div className="p-2 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-lg">
             <Icon className="w-5 h-5 text-black" />
           </div>
-          <h3 className="text-xl font-bold bg-linear-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+          <h3 className="text-xl font-bold bg-linear-to-r from-[#22d3ee] to-[#FFD700] bg-clip-text text-transparent">
             {data.name}
           </h3>
         </div>
@@ -85,10 +85,10 @@ const SizeTable = ({ data }: {
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-[#FF69B4]/10">
-              <th className="text-left p-4 text-sm font-semibold text-[#FF69B4]">Size</th>
+            <tr className="bg-[#22d3ee]/10">
+              <th className="text-left p-4 text-sm font-semibold text-[#22d3ee]">Size</th>
               {Object.keys(data.sizes[0]).filter(key => key !== 'size').map((measurement) => (
-                <th key={measurement} className="text-left p-4 text-sm font-semibold text-[#FF69B4] capitalize">
+                <th key={measurement} className="text-left p-4 text-sm font-semibold text-[#22d3ee] capitalize">
                   {measurement === 'chest' ? 'Chest (in)' : 
                    measurement === 'length' ? 'Length (in)' :
                    measurement === 'shoulder' ? 'Shoulder (in)' :
@@ -125,18 +125,18 @@ export default function SizeGuidePage() {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white font-[Lato]">
       {/* Header */}
-      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#FF69B4]/20">
+      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#22d3ee]/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-[#FF69B4] hover:text-[#FFD700] transition-colors mb-6 group"
+            className="inline-flex items-center gap-2 text-[#22d3ee] hover:text-[#FFD700] transition-colors mb-6 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
           
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
               Size Guide
             </h1>
             <p className="text-xl text-gray-300 mb-8">
@@ -150,12 +150,12 @@ export default function SizeGuidePage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Measurement Tips */}
-        <div className="bg-linear-to-r from-[#FF69B4]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#FF69B4]/20 rounded-3xl p-8 mb-12">
+        <div className="bg-linear-to-r from-[#22d3ee]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#22d3ee]/20 rounded-3xl p-8 mb-12">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Info className="w-6 h-6 text-[#FF69B4]" />
-                <h2 className="text-2xl font-bold text-[#FF69B4]">How to Measure</h2>
+                <Info className="w-6 h-6 text-[#22d3ee]" />
+                <h2 className="text-2xl font-bold text-[#22d3ee]">How to Measure</h2>
               </div>
               <ul className="space-y-3 text-gray-300">
                 <li><strong className="text-white">Chest:</strong> Measure around the fullest part of your chest, under your arms</li>
@@ -187,8 +187,8 @@ export default function SizeGuidePage() {
               onClick={() => setActiveTab(key)}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 activeTab === key
-                  ? 'bg-linear-to-r from-[#FF69B4] to-[#FF1493] text-black shadow-[0_0_20px_rgba(255,105,180,0.4)]'
-                  : 'bg-[#1A1A1A]/80 text-gray-300 hover:text-[#FF69B4] border border-[#FF69B4]/20'
+                  ? 'bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] text-black shadow-[0_0_20px_rgba(34,211,238,0.35)]'
+                  : 'bg-[#1A1A1A]/80 text-gray-300 hover:text-[#22d3ee] border border-[#22d3ee]/20'
               }`}
             >
               {data.name}
@@ -210,8 +210,8 @@ export default function SizeGuidePage() {
 
         {/* Additional Info */}
         <div className="grid md:grid-cols-2 gap-8 mt-12">
-          <div className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#FF69B4]/20 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-[#FF69B4] mb-4">Size Chart Notes</h3>
+          <div className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#22d3ee]/20 rounded-2xl p-6">
+            <h3 className="text-xl font-bold text-[#22d3ee] mb-4">Size Chart Notes</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>• All measurements are in inches</li>
               <li>• Measurements may vary by ±0.5&quot; due to manufacturing</li>
@@ -229,7 +229,7 @@ export default function SizeGuidePage() {
             <div className="space-y-2">
               <Link 
                 href="/help/contact"
-                className="inline-block bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-4 py-2 rounded-lg text-sm transition-all duration-300"
+                className="inline-block bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-4 py-2 rounded-lg text-sm transition-all duration-300"
               >
                 Get Sizing Help
               </Link>
@@ -241,8 +241,8 @@ export default function SizeGuidePage() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12 p-8 bg-linear-to-r from-[#FF69B4]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#FF69B4]/20 rounded-3xl">
-          <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+        <div className="text-center mt-12 p-8 bg-linear-to-r from-[#22d3ee]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#22d3ee]/20 rounded-3xl">
+          <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-[#22d3ee] to-[#FFD700] bg-clip-text text-transparent">
             Ready to Find Your Perfect Anime Fit?
           </h3>
           <p className="text-gray-300 mb-6">
@@ -250,7 +250,7 @@ export default function SizeGuidePage() {
           </p>
           <Link
             href="/#shop"
-            className="inline-block bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)]"
+            className="inline-block bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)]"
           >
             Shop Now
           </Link>

@@ -111,8 +111,8 @@ export default function CartPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-md mx-auto px-4"
           >
-            <div className="w-24 h-24 bg-linear-to-br from-[#FF69B4]/20 to-[#1E90FF]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <ShoppingCart className="w-12 h-12 text-[#FF69B4]" />
+            <div className="w-24 h-24 bg-linear-to-br from-[#22d3ee]/20 to-[#1E90FF]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <ShoppingCart className="w-12 h-12 text-[#22d3ee]" />
             </div>
             <h1 className="text-3xl font-bold text-white mb-4">Your Cart is Empty</h1>
             <p className="text-gray-300 mb-8">
@@ -120,7 +120,7 @@ export default function CartPage() {
             </p>
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300"
             >
               Continue Shopping
               <ArrowRight className="w-5 h-5" />
@@ -140,7 +140,7 @@ export default function CartPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#FF69B4] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#22d3ee] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
             YOUR CART
           </h1>
           <p className="text-gray-300 text-lg">
@@ -157,13 +157,13 @@ export default function CartPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6 ${
+                className={`bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6 ${
                   !item.inStock ? 'opacity-75' : ''
                 }`}
               >
                 <div className="flex flex-col sm:flex-row gap-4">
                   {/* Product Image */}
-                  <div className="relative w-full sm:w-32 h-32 bg-linear-to-br from-[#FF69B4]/20 to-[#1E90FF]/20 rounded-lg overflow-hidden shrink-0">
+                  <div className="relative w-full sm:w-32 h-32 bg-linear-to-br from-[#22d3ee]/20 to-[#1E90FF]/20 rounded-lg overflow-hidden shrink-0">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -184,7 +184,7 @@ export default function CartPage() {
                         <h3 className="text-white font-semibold text-lg mb-1">
                           <Link 
                             href={`/products/${item.id}`}
-                            className="hover:text-[#FF69B4] transition-colors"
+                            className="hover:text-[#22d3ee] transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -208,7 +208,7 @@ export default function CartPage() {
                     {/* Price & Quantity */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-[#FF69B4] font-bold text-lg">
+                        <span className="text-[#22d3ee] font-bold text-lg">
                           ${item.price}
                         </span>
                         {item.originalPrice && (
@@ -258,7 +258,7 @@ export default function CartPage() {
             <div className="text-center pt-4">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 text-[#FF69B4] hover:text-[#FF1493] transition-colors font-medium"
+                className="inline-flex items-center gap-2 text-[#22d3ee] hover:text-[#0ea5e9] transition-colors font-medium"
               >
                 Continue Shopping
                 <ArrowRight className="w-4 h-4" />
@@ -273,7 +273,7 @@ export default function CartPage() {
             className="space-y-6"
           >
             {/* Promo Code */}
-            <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+            <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
               <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
                 <Tag className="w-5 h-5 text-[#FFD700]" />
                 Promo Code
@@ -295,11 +295,11 @@ export default function CartPage() {
                     placeholder="Enter promo code"
                     value={promoCode}
                     onChange={(e) => setPromoCode(e.target.value)}
-                    className="flex-1 px-3 py-2 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none"
+                    className="flex-1 px-3 py-2 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none"
                   />
                   <button
                     onClick={applyPromoCode}
-                    className="px-4 py-2 bg-[#FF69B4] text-black font-medium rounded-lg hover:bg-[#FF1493] transition-colors"
+                    className="px-4 py-2 bg-[#22d3ee] text-black font-medium rounded-lg hover:bg-[#0ea5e9] transition-colors"
                   >
                     Apply
                   </button>
@@ -308,7 +308,7 @@ export default function CartPage() {
             </div>
 
             {/* Order Summary */}
-            <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+            <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
               <h3 className="text-white font-semibold mb-4">Order Summary</h3>
               
               <div className="space-y-3 text-gray-300">
@@ -352,8 +352,8 @@ export default function CartPage() {
               </div>
 
               {shipping > 0 && (
-                <div className="mt-4 p-3 bg-[#FF69B4]/10 border border-[#FF69B4]/20 rounded-lg">
-                  <p className="text-[#FF69B4] text-sm font-medium">
+                <div className="mt-4 p-3 bg-[#22d3ee]/10 border border-[#22d3ee]/20 rounded-lg">
+                  <p className="text-[#22d3ee] text-sm font-medium">
                     Add ${(75 - subtotal).toFixed(2)} more for FREE shipping!
                   </p>
                 </div>
@@ -363,16 +363,16 @@ export default function CartPage() {
             {/* Checkout Button */}
             <Link
               href="/checkout"
-              className="block w-full py-4 bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300 text-center shadow-[0_0_30px_rgba(255,105,180,0.3)] hover:shadow-[0_0_40px_rgba(30,144,255,0.4)]"
+              className="block w-full py-4 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300 text-center shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_40px_rgba(30,144,255,0.4)]"
             >
               Proceed to Checkout
             </Link>
 
             {/* Security & Features */}
-            <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+            <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
               <div className="space-y-4 text-sm text-gray-300">
                 <div className="flex items-center gap-3">
-                  <Truck className="w-5 h-5 text-[#FF69B4] shrink-0" />
+                  <Truck className="w-5 h-5 text-[#22d3ee] shrink-0" />
                   <div>
                     <div className="font-medium text-white">Free Shipping</div>
                     <div>On orders over $75</div>

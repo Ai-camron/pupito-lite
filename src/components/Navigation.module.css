@@ -3,8 +3,8 @@
 /* Promo Bar */
 .promoBar {
   width: 100%;
-  background-color: #FF69B4;
-  color: black;
+  background-color: #0EA5E9;
+  color: #0b1224;
   font-size: 0.875rem;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -20,8 +20,8 @@
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 105, 180, 0.3);
-  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.1);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.35);
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.15);
 }
 
 .headerContainer {
@@ -74,7 +74,7 @@
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  background: linear-gradient(90deg, #ff3ebf, #00a9ff, #ffe949);
+  background: linear-gradient(90deg, #22d3ee, #0ea5e9, #4f46e5);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -122,8 +122,8 @@
 }
 
 .navLinkActive {
-  color: #FF69B4;
-  background-color: rgba(255, 105, 180, 0.1);
+  color: #22d3ee;
+  background-color: rgba(34, 211, 238, 0.12);
 }
 
 .navLinkInactive {
@@ -131,8 +131,8 @@
 }
 
 .navLinkInactive:hover {
-  color: #FF69B4;
-  background-color: rgba(255, 105, 180, 0.05);
+  color: #22d3ee;
+  background-color: rgba(34, 211, 238, 0.08);
 }
 
 /* Actions */
@@ -145,17 +145,17 @@
 .actionButton {
   padding: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: background-color 0.15s ease-in-out;
 }
 
 .actionButton:hover {
-  background-color: rgba(255, 105, 180, 0.1);
+  background-color: rgba(34, 211, 238, 0.1);
 }
 
 .actionButton:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #FF69B4, 0 0 0 4px rgba(255, 105, 180, 0.2);
+  box-shadow: 0 0 0 2px #22d3ee, 0 0 0 4px rgba(14, 165, 233, 0.25);
 }
 
 .actionIcon {
@@ -173,8 +173,8 @@
   position: absolute;
   top: -0.25rem;
   right: -0.25rem;
-  background-color: #FF69B4;
-  color: black;
+  background-color: #22d3ee;
+  color: #0b1224;
   font-size: 9px;
   padding: 0.125rem 0.375rem;
   border-radius: 9999px;
@@ -190,7 +190,7 @@
   display: block;
   padding: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: background-color 0.15s ease-in-out;
 }
 
@@ -201,12 +201,12 @@
 }
 
 .mobileMenuToggle:hover {
-  background-color: rgba(255, 105, 180, 0.1);
+  background-color: rgba(34, 211, 238, 0.12);
 }
 
 .mobileMenuToggle:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #FF69B4, 0 0 0 4px rgba(255, 105, 180, 0.2);
+  box-shadow: 0 0 0 2px #22d3ee, 0 0 0 4px rgba(14, 165, 233, 0.25);
 }
 
 /* Mobile Menu */
@@ -216,7 +216,7 @@
   background-color: rgba(0, 0, 0, 0.95);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(255, 105, 180, 0.2);
+  border-top: 1px solid rgba(34, 211, 238, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -243,8 +243,8 @@
 }
 
 .mobileNavLinkActive {
-  color: #FF69B4;
-  background-color: rgba(255, 105, 180, 0.1);
+  color: #22d3ee;
+  background-color: rgba(34, 211, 238, 0.12);
 }
 
 .mobileNavLinkInactive {
@@ -252,8 +252,8 @@
 }
 
 .mobileNavLinkInactive:hover {
-  color: #FF69B4;
-  background-color: rgba(255, 105, 180, 0.05);
+  color: #22d3ee;
+  background-color: rgba(34, 211, 238, 0.08);
 }
 
 .mobileNavIcon {
