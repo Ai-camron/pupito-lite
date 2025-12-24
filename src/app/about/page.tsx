@@ -99,14 +99,14 @@ export default function AboutPage() {
       <div className="min-h-screen bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D]">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-r from-[#FF69B4]/20 via-[#1E90FF]/20 to-[#FFD700]/20" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#22d3ee]/20 via-[#1E90FF]/20 to-[#FFD700]/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-linear-to-r from-[#FF69B4] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold bg-linear-to-r from-[#22d3ee] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-8">
               ABOUT PUPITO
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -131,10 +131,10 @@ export default function AboutPage() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-black" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-[#FF69B4] mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-[#22d3ee] mb-2">
                     {stat.value}
                   </div>
                   <div className="text-gray-300 font-medium">
@@ -157,7 +157,7 @@ export default function AboutPage() {
               className="space-y-6"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white">
-                Our <span className="text-[#FF69B4]">Story</span>
+                Our <span className="text-[#22d3ee]">Story</span>
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, x: 0 }}
               className="relative"
             >
-              <div className="aspect-square bg-linear-to-br from-[#FF69B4]/30 to-[#1E90FF]/30 rounded-2xl overflow-hidden">
+              <div className="aspect-square bg-linear-to-br from-[#22d3ee]/30 to-[#1E90FF]/30 rounded-2xl overflow-hidden">
                 <Image
                   src="/images/placeholder-hero.svg"
                   alt="PUPITO Team"
@@ -193,7 +193,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[#FFD700] to-[#FF69B4] rounded-2xl opacity-80" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[#FFD700] to-[#22d3ee] rounded-2xl opacity-80" />
             </motion.div>
           </div>
         </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-8 hover:shadow-[0_0_30px_rgba(255,105,180,0.2)] transition-all duration-300"
+                  className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-8 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-linear-to-br from-[#1E90FF] to-[#00FFFF] rounded-lg flex items-center justify-center mb-6">
                     <Icon className="w-6 h-6 text-black" />
@@ -256,7 +256,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-linear-to-b from-[#FF69B4]/30 via-[#1E90FF]/30 to-[#FFD700]/30 rounded-full -z-10 opacity-50" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-linear-to-b from-[#22d3ee]/30 via-[#1E90FF]/30 to-[#FFD700]/30 rounded-full -z-10 opacity-50" />
             
             <div className="space-y-16">
               {timeline.map((item, index) => (
@@ -273,8 +273,8 @@ export default function AboutPage() {
                   <div className={`w-full lg:w-5/12 ${
                     index % 2 === 0 ? 'lg:text-right lg:pr-8' : 'lg:pl-8'
                   }`}>
-                    <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
-                      <div className="text-[#FF69B4] font-bold text-lg mb-2">{item.year}</div>
+                    <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
+                      <div className="text-[#22d3ee] font-bold text-lg mb-2">{item.year}</div>
                       <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
                       <p className="text-gray-300 leading-relaxed">{item.description}</p>
                     </div>
@@ -282,7 +282,7 @@ export default function AboutPage() {
 
                   {/* Center Dot */}
                   <div className="hidden lg:flex w-2/12 justify-center">
-                    <div className="w-4 h-4 bg-linear-to-br from-[#FF69B4] to-[#1E90FF] rounded-full border-4 border-[#0D0D0D]" />
+                    <div className="w-4 h-4 bg-linear-to-br from-[#22d3ee] to-[#1E90FF] rounded-full border-4 border-[#0D0D0D]" />
                   </div>
 
                   {/* Spacer */}
@@ -295,7 +295,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-linear-to-r from-[#FF69B4]/20 via-[#1E90FF]/20 to-[#FFD700]/20">
+      <section className="py-24 bg-linear-to-r from-[#22d3ee]/20 via-[#1E90FF]/20 to-[#FFD700]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -303,7 +303,7 @@ export default function AboutPage() {
             className="space-y-8"
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white">
-              Join the <span className="text-[#FF69B4]">PUPITO</span> Family
+              Join the <span className="text-[#22d3ee]">PUPITO</span> Family
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed">
               Ready to express your love for anime culture through fashion? 
@@ -312,13 +312,13 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/products"
-                className="px-8 py-4 bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(255,105,180,0.3)] hover:shadow-[0_0_40px_rgba(30,144,255,0.4)]"
+                className="px-8 py-4 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_40px_rgba(30,144,255,0.4)]"
               >
                 Shop Now
               </Link>
               <Link
                 href="/help/contact"
-                className="px-8 py-4 border-2 border-[#FF69B4] text-[#FF69B4] hover:bg-[#FF69B4] hover:text-black font-bold rounded-xl transition-all duration-300"
+                className="px-8 py-4 border-2 border-[#22d3ee] text-[#22d3ee] hover:bg-[#22d3ee] hover:text-black font-bold rounded-xl transition-all duration-300"
               >
                 Get in Touch
               </Link>

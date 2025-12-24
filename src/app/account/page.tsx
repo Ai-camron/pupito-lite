@@ -158,7 +158,7 @@ export default function AccountPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#FF69B4] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#22d3ee] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
             MY ACCOUNT
           </h1>
           <p className="text-gray-300 text-lg">
@@ -173,7 +173,7 @@ export default function AccountPage() {
             animate={{ opacity: 1, x: 0 }}
             className="lg:col-span-1"
           >
-            <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6 sticky top-8">
+            <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6 sticky top-8">
               <div className="space-y-2">
                 {tabs.map((tab) => {
                   const Icon = tab.icon
@@ -183,8 +183,8 @@ export default function AccountPage() {
                       onClick={() => setActiveTab(tab.id)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-left ${
                         activeTab === tab.id
-                          ? 'bg-[#FF69B4] text-black'
-                          : 'text-gray-300 hover:text-white hover:bg-[#FF69B4]/10'
+                          ? 'bg-[#22d3ee] text-black'
+                          : 'text-gray-300 hover:text-white hover:bg-[#22d3ee]/10'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
@@ -214,12 +214,12 @@ export default function AccountPage() {
           >
             {/* Profile Tab */}
             {activeTab === 'profile' && (
-              <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+              <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-white">Profile Information</h2>
                   <button
                     onClick={() => setIsEditing(!isEditing)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#FF69B4] text-black rounded-lg hover:bg-[#FF1493] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#22d3ee] text-black rounded-lg hover:bg-[#0ea5e9] transition-colors"
                   >
                     <Edit className="w-4 h-4" />
                     {isEditing ? 'Save' : 'Edit'}
@@ -238,7 +238,7 @@ export default function AccountPage() {
                       value={profileData.firstName}
                       onChange={(e) => setProfileData({...profileData, firstName: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="First Name"
                     />
                   </div>
@@ -253,7 +253,7 @@ export default function AccountPage() {
                       value={profileData.lastName}
                       onChange={(e) => setProfileData({...profileData, lastName: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="Last Name"
                     />
                   </div>
@@ -269,7 +269,7 @@ export default function AccountPage() {
                       value={profileData.email}
                       onChange={(e) => setProfileData({...profileData, email: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="Email Address"
                     />
                   </div>
@@ -285,7 +285,7 @@ export default function AccountPage() {
                       value={profileData.phone}
                       onChange={(e) => setProfileData({...profileData, phone: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="Phone Number"
                     />
                   </div>
@@ -301,7 +301,7 @@ export default function AccountPage() {
                       value={profileData.birthDate}
                       onChange={(e) => setProfileData({...profileData, birthDate: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="Birth Date"
                     />
                   </div>
@@ -317,7 +317,7 @@ export default function AccountPage() {
                       value={profileData.address}
                       onChange={(e) => setProfileData({...profileData, address: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="Street Address"
                     />
                   </div>
@@ -332,7 +332,7 @@ export default function AccountPage() {
                       value={profileData.city}
                       onChange={(e) => setProfileData({...profileData, city: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="City"
                     />
                   </div>
@@ -347,7 +347,7 @@ export default function AccountPage() {
                       value={profileData.zipCode}
                       onChange={(e) => setProfileData({...profileData, zipCode: e.target.value})}
                       disabled={!isEditing}
-                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors disabled:opacity-50"
+                      className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors disabled:opacity-50"
                       aria-label="ZIP Code"
                     />
                   </div>
@@ -366,7 +366,7 @@ export default function AccountPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6"
+                    className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
                       <div>
@@ -380,7 +380,7 @@ export default function AccountPage() {
                         </span>
                         <Link
                           href={`/orders/${order.id}`}
-                          className="text-[#FF69B4] hover:text-[#FF1493] transition-colors"
+                          className="text-[#22d3ee] hover:text-[#0ea5e9] transition-colors"
                         >
                           View Details
                         </Link>
@@ -390,7 +390,7 @@ export default function AccountPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                       {order.items.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-center gap-3">
-                          <div className="relative w-16 h-16 bg-linear-to-br from-[#FF69B4]/20 to-[#1E90FF]/20 rounded-lg overflow-hidden">
+                          <div className="relative w-16 h-16 bg-linear-to-br from-[#22d3ee]/20 to-[#1E90FF]/20 rounded-lg overflow-hidden">
                             <Image
                               src={item.image}
                               alt={item.name}
@@ -431,10 +431,10 @@ export default function AccountPage() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl overflow-hidden hover:shadow-[0_0_30px_rgba(255,105,180,0.3)] transition-all duration-300 group"
+                      className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl overflow-hidden hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-300 group"
                     >
                       <Link href={`/products/${item.id}`}>
-                        <div className="aspect-square relative overflow-hidden bg-linear-to-br from-[#FF69B4]/20 to-[#1E90FF]/20">
+                        <div className="aspect-square relative overflow-hidden bg-linear-to-br from-[#22d3ee]/20 to-[#1E90FF]/20">
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -450,13 +450,13 @@ export default function AccountPage() {
                       </Link>
 
                       <div className="p-4">
-                        <h3 className="text-white font-semibold mb-2 group-hover:text-[#FF69B4] transition-colors">
+                        <h3 className="text-white font-semibold mb-2 group-hover:text-[#22d3ee] transition-colors">
                           {item.name}
                         </h3>
                         
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <span className="text-[#FF69B4] font-bold text-lg">
+                            <span className="text-[#22d3ee] font-bold text-lg">
                               ${item.price}
                             </span>
                             {item.originalPrice && (
@@ -476,7 +476,7 @@ export default function AccountPage() {
 
                         <button
                           disabled={!item.inStock}
-                          className="w-full mt-3 py-2 bg-[#FF69B4] text-black font-medium rounded-lg hover:bg-[#FF1493] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full mt-3 py-2 bg-[#22d3ee] text-black font-medium rounded-lg hover:bg-[#0ea5e9] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {item.inStock ? 'Add to Cart' : 'Out of Stock'}
                         </button>
@@ -493,7 +493,7 @@ export default function AccountPage() {
                 <h2 className="text-2xl font-bold text-white">Account Settings</h2>
                 
                 {/* Password Section */}
-                <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+                <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
                   <h3 className="text-white font-semibold text-lg mb-4">Change Password</h3>
                   
                   <div className="space-y-4 max-w-md">
@@ -505,7 +505,7 @@ export default function AccountPage() {
                         <input
                           id="current-password"
                           type={showPassword ? 'text' : 'password'}
-                          className="w-full px-3 py-3 pr-10 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                          className="w-full px-3 py-3 pr-10 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                           placeholder="Enter current password"
                           aria-label="Current Password"
                         />
@@ -527,7 +527,7 @@ export default function AccountPage() {
                       <input
                         id="new-password"
                         type="password"
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="Enter new password"
                         aria-label="New Password"
                       />
@@ -540,40 +540,40 @@ export default function AccountPage() {
                       <input
                         id="confirm-password"
                         type="password"
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="Confirm new password"
                         aria-label="Confirm New Password"
                       />
                     </div>
 
-                    <button className="px-6 py-3 bg-[#FF69B4] text-black font-medium rounded-lg hover:bg-[#FF1493] transition-colors">
+                    <button className="px-6 py-3 bg-[#22d3ee] text-black font-medium rounded-lg hover:bg-[#0ea5e9] transition-colors">
                       Update Password
                     </button>
                   </div>
                 </div>
 
                 {/* Notifications Section */}
-                <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+                <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
                   <h3 className="text-white font-semibold text-lg mb-4">Notification Preferences</h3>
                   
                   <div className="space-y-4">
                     <label htmlFor="email-notifications" className="flex items-center gap-3">
-                      <input id="email-notifications" type="checkbox" className="w-4 h-4 text-[#FF69B4] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#FF69B4]" />
+                      <input id="email-notifications" type="checkbox" className="w-4 h-4 text-[#22d3ee] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#22d3ee]" />
                       <span className="text-gray-300">Email notifications for new products</span>
                     </label>
 
                     <label htmlFor="order-updates" className="flex items-center gap-3">
-                      <input id="order-updates" type="checkbox" className="w-4 h-4 text-[#FF69B4] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#FF69B4]" />
+                      <input id="order-updates" type="checkbox" className="w-4 h-4 text-[#22d3ee] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#22d3ee]" />
                       <span className="text-gray-300">Order status updates</span>
                     </label>
 
                     <label htmlFor="promotional-offers" className="flex items-center gap-3">
-                      <input id="promotional-offers" type="checkbox" className="w-4 h-4 text-[#FF69B4] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#FF69B4]" />
+                      <input id="promotional-offers" type="checkbox" className="w-4 h-4 text-[#22d3ee] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#22d3ee]" />
                       <span className="text-gray-300">Promotional offers and discounts</span>
                     </label>
 
                     <label htmlFor="wishlist-alerts" className="flex items-center gap-3">
-                      <input id="wishlist-alerts" type="checkbox" className="w-4 h-4 text-[#FF69B4] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#FF69B4]" />
+                      <input id="wishlist-alerts" type="checkbox" className="w-4 h-4 text-[#22d3ee] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#22d3ee]" />
                       <span className="text-gray-300">Wishlist item back in stock alerts</span>
                     </label>
                   </div>

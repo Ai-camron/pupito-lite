@@ -59,18 +59,18 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white font-[Lato]">
       {/* Header */}
-      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#FF69B4]/20">
+      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#22d3ee]/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-[#FF69B4] hover:text-[#FFD700] transition-colors mb-6 group"
+            className="inline-flex items-center gap-2 text-[#22d3ee] hover:text-[#FFD700] transition-colors mb-6 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
           
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
               Contact Us
             </h1>
             <p className="text-xl text-gray-300 mb-8">
@@ -89,12 +89,12 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-center p-8 bg-linear-to-br from-[#FF69B4]/10 to-[#FF1493]/5 border border-[#FF69B4]/20 rounded-2xl"
+            className="text-center p-8 bg-linear-to-br from-[#22d3ee]/10 to-[#0ea5e9]/5 border border-[#22d3ee]/20 rounded-2xl"
           >
-            <div className="p-4 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-2xl w-fit mx-auto mb-4">
+            <div className="p-4 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-2xl w-fit mx-auto mb-4">
               <Mail className="w-8 h-8 text-black" />
             </div>
-            <h3 className="text-xl font-bold text-[#FF69B4] mb-2">Email Support</h3>
+            <h3 className="text-xl font-bold text-[#22d3ee] mb-2">Email Support</h3>
             <p className="text-gray-400 mb-4">Get help via email</p>
             <div className="space-y-2">
               <p className="text-sm text-white font-semibold">{STORE_CONTACT.email}</p>
@@ -128,11 +128,11 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#FF69B4]/20 rounded-2xl p-8 backdrop-blur"
+            className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#22d3ee]/20 rounded-2xl p-8 backdrop-blur"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Send className="w-6 h-6 text-[#FF69B4]" />
-              <h2 className="text-2xl font-bold bg-linear-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+              <Send className="w-6 h-6 text-[#22d3ee]" />
+              <h2 className="text-2xl font-bold bg-linear-to-r from-[#22d3ee] to-[#FFD700] bg-clip-text text-transparent">
                 Send us a Message
               </h2>
             </div>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                 <p className="text-gray-400 mb-4">Thanks for reaching out! We&apos;ll get back to you within 4 hours.</p>
                 <Button
                   onClick={() => setSubmitted(false)}
-                  className="bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold rounded-xl"
+                  className="bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold rounded-xl"
                 >
                   Send Another Message
                 </Button>
@@ -159,40 +159,40 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-[#FF69B4] mb-2">Name</label>
+                    <label className="block text-sm font-semibold text-[#22d3ee] mb-2">Name</label>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#FF69B4]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF69B4] focus:border-[#FF1493] transition-all duration-300"
+                      className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#22d3ee]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-[#0ea5e9] transition-all duration-300"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-[#FF69B4] mb-2">Email</label>
+                    <label className="block text-sm font-semibold text-[#22d3ee] mb-2">Email</label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#FF69B4]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF69B4] focus:border-[#FF1493] transition-all duration-300"
+                      className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#22d3ee]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-[#0ea5e9] transition-all duration-300"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold text-[#FF69B4] mb-2">Subject</label>
+                  <label className="block text-sm font-semibold text-[#22d3ee] mb-2">Subject</label>
                   <select
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
                     title="Select a topic for your message"
-                    className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#FF69B4]/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#FF69B4] focus:border-[#FF1493] transition-all duration-300"
+                    className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#22d3ee]/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-[#0ea5e9] transition-all duration-300"
                   >
                     <option value="">Select a topic</option>
                     <option value="order">Order Support</option>
@@ -205,14 +205,14 @@ export default function ContactPage() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold text-[#FF69B4] mb-2">Message</label>
+                  <label className="block text-sm font-semibold text-[#22d3ee] mb-2">Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#FF69B4]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF69B4] focus:border-[#FF1493] transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-[#1A1A1A]/80 border border-[#22d3ee]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-[#0ea5e9] transition-all duration-300 resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold py-3 rounded-xl shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)] transition-all duration-300 disabled:opacity-50"
+                  className="w-full bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold py-3 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)] transition-all duration-300 disabled:opacity-50"
                 >
                   {isLoading ? "Sending..." : "Send Message"}
                 </Button>
@@ -248,8 +248,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-white mb-2">Follow the Squad</h3>
                   <div className="flex gap-4 mt-3">
-                    <div className="p-3 bg-[#FF69B4]/20 border border-[#FF69B4]/30 rounded-lg hover:bg-[#FF69B4]/30 transition-colors cursor-pointer">
-                      <Instagram className="w-5 h-5 text-[#FF69B4]" />
+                    <div className="p-3 bg-[#22d3ee]/20 border border-[#22d3ee]/30 rounded-lg hover:bg-[#22d3ee]/30 transition-colors cursor-pointer">
+                      <Instagram className="w-5 h-5 text-[#22d3ee]" />
                     </div>
                     <div className="p-3 bg-[#1E90FF]/20 border border-[#1E90FF]/30 rounded-lg hover:bg-[#1E90FF]/30 transition-colors cursor-pointer">
                       <Twitter className="w-5 h-5 text-[#1E90FF]" />
@@ -272,9 +272,9 @@ export default function ContactPage() {
               <div className="space-y-3">
                 <Link
                   href="/help/faq"
-                  className="block p-4 bg-[#FF69B4]/10 border border-[#FF69B4]/20 rounded-xl hover:bg-[#FF69B4]/20 transition-colors group"
+                  className="block p-4 bg-[#22d3ee]/10 border border-[#22d3ee]/20 rounded-xl hover:bg-[#22d3ee]/20 transition-colors group"
                 >
-                  <h3 className="font-semibold text-[#FF69B4] group-hover:text-white transition-colors">FAQ</h3>
+                  <h3 className="font-semibold text-[#22d3ee] group-hover:text-white transition-colors">FAQ</h3>
                   <p className="text-sm text-gray-500">Common questions and answers</p>
                 </Link>
                 <Link

@@ -42,19 +42,19 @@ const SignupPopup: React.FC<SignupPopupProps> = ({
             }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
-            <div className="relative bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D] border-2 border-[#FF69B4] rounded-3xl p-6 sm:p-8 max-w-md w-full mx-4 overflow-hidden">
+            <div className="relative bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D] border-2 border-[#22d3ee] rounded-3xl p-6 sm:p-8 max-w-md w-full mx-4 overflow-hidden">
               
               {/* Animated background elements */}
-              <div className="absolute top-0 left-0 w-20 h-20 bg-linear-to-br from-[#FF69B4]/20 to-[#FF1493]/10 rounded-full blur-xl animate-pulse" />
+              <div className="absolute top-0 left-0 w-20 h-20 bg-linear-to-br from-[#22d3ee]/20 to-[#0ea5e9]/10 rounded-full blur-xl animate-pulse" />
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-linear-to-br from-[#00FFFF]/15 to-[#1E90FF]/10 rounded-full blur-xl animate-pulse [animation-delay:1s]" />
               
               {/* Close button */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 rounded-full border border-[#FF69B4]/30 bg-[#1A1A1A]/80 hover:bg-[#FF69B4]/20 transition-all duration-300 group z-10"
+                className="absolute top-4 right-4 p-2 rounded-full border border-[#22d3ee]/30 bg-[#1A1A1A]/80 hover:bg-[#22d3ee]/20 transition-all duration-300 group z-10"
                 aria-label="Close popup"
               >
-                <X className="w-4 h-4 text-[#FF69B4] group-hover:text-white transition-colors" />
+                <X className="w-4 h-4 text-[#22d3ee] group-hover:text-white transition-colors" />
               </button>
 
               {/* Content */}
@@ -67,7 +67,7 @@ const SignupPopup: React.FC<SignupPopupProps> = ({
                   className="flex justify-center mb-4"
                 >
                   <div className="relative">
-                    <div className="w-16 h-16 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,105,180,0.5)]">
+                    <div className="w-16 h-16 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.45)]">
                       <Sparkles className="w-8 h-8 text-white" />
                     </div>
                     {/* Floating icons */}
@@ -106,16 +106,16 @@ const SignupPopup: React.FC<SignupPopupProps> = ({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <h2 className="text-2xl sm:text-3xl font-black bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent mb-2">
+                  <h2 className="text-2xl sm:text-3xl font-black bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent mb-2">
                     WELCOME TO THE PUP SQUAD! 🎉
                   </h2>
                   
                   <p className="text-sm text-gray-300 mb-4 leading-relaxed">
-                    <span className="text-[#FF69B4] font-semibold">{email}</span> just joined the ultimate anime streetwear community!
+                    <span className="text-[#22d3ee] font-semibold">{email}</span> just joined the ultimate anime streetwear community!
                   </p>
 
                   {/* Squad Status */}
-                  <div className="bg-linear-to-r from-[#1A1A1A]/80 to-[#2A2A2A]/80 rounded-2xl border border-[#FF69B4]/20 p-4 mb-6 backdrop-blur">
+                  <div className="bg-linear-to-r from-[#1A1A1A]/80 to-[#2A2A2A]/80 rounded-2xl border border-[#22d3ee]/20 p-4 mb-6 backdrop-blur">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-[#00FFFF] mb-1">∞</div>
                       <div className="text-sm text-gray-400">Epic Drops Awaiting</div>
@@ -129,7 +129,7 @@ const SignupPopup: React.FC<SignupPopupProps> = ({
                       <span className="text-gray-300">Exclusive early access to limited drops</span>
                     </div>
                     <div className="flex items-center gap-3 text-xs">
-                      <div className="w-2 h-2 bg-[#FF69B4] rounded-full animate-pulse" />
+                      <div className="w-2 h-2 bg-[#22d3ee] rounded-full animate-pulse" />
                       <span className="text-gray-300">Secret discount codes & flash sales</span>
                     </div>
                     <div className="flex items-center gap-3 text-xs">
@@ -141,7 +141,7 @@ const SignupPopup: React.FC<SignupPopupProps> = ({
                   {/* Call to Action */}
                   <Button
                     onClick={onClose}
-                    className="w-full bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-white hover:text-black font-bold py-3 rounded-2xl shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)] transition-all duration-300"
+                    className="w-full bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-white hover:text-black font-bold py-3 rounded-2xl shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)] transition-all duration-300"
                   >
                     Start My Anime Arc! 🚀
                   </Button>

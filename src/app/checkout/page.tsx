@@ -105,7 +105,7 @@ export default function CheckoutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#FF69B4] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-[#22d3ee] via-[#1E90FF] to-[#FFD700] bg-clip-text text-transparent mb-4">
             CHECKOUT
           </h1>
           
@@ -115,7 +115,7 @@ export default function CheckoutPage() {
               <div key={step.id} className="flex items-center">
                 <div className={`relative flex items-center justify-center w-8 h-8 rounded-full border-2 transition-colors ${
                   step.id === currentStep
-                    ? 'border-[#FF69B4] bg-[#FF69B4] text-black'
+                    ? 'border-[#22d3ee] bg-[#22d3ee] text-black'
                     : step.completed
                     ? 'border-green-500 bg-green-500 text-white'
                     : 'border-gray-600 text-gray-400'
@@ -127,7 +127,7 @@ export default function CheckoutPage() {
                   )}
                 </div>
                 <span className={`ml-2 text-sm ${
-                  step.id === currentStep ? 'text-[#FF69B4]' : 'text-gray-400'
+                  step.id === currentStep ? 'text-[#22d3ee]' : 'text-gray-400'
                 }`}>
                   {step.title}
                 </span>
@@ -149,7 +149,7 @@ export default function CheckoutPage() {
             {/* Back to Cart */}
             <Link
               href="/cart"
-              className="inline-flex items-center gap-2 text-[#FF69B4] hover:text-[#FF1493] transition-colors"
+              className="inline-flex items-center gap-2 text-[#22d3ee] hover:text-[#0ea5e9] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Cart
@@ -158,7 +158,7 @@ export default function CheckoutPage() {
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Step 1: Contact Information */}
               {currentStep >= 1 && (
-                <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+                <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
                   <h3 className="text-white font-semibold text-lg mb-6">Contact Information</h3>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
                         required
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -184,7 +184,7 @@ export default function CheckoutPage() {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -200,7 +200,7 @@ export default function CheckoutPage() {
                         required
                         value={formData.firstName}
                         onChange={(e) => handleInputChange('firstName', e.target.value)}
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="First name"
                       />
                     </div>
@@ -214,7 +214,7 @@ export default function CheckoutPage() {
                         required
                         value={formData.lastName}
                         onChange={(e) => handleInputChange('lastName', e.target.value)}
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="Last name"
                       />
                     </div>
@@ -224,7 +224,7 @@ export default function CheckoutPage() {
 
               {/* Step 2: Shipping Address */}
               {currentStep >= 2 && (
-                <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+                <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
                   <h3 className="text-white font-semibold text-lg mb-6">Shipping Address</h3>
                   
                   <div className="space-y-4">
@@ -237,7 +237,7 @@ export default function CheckoutPage() {
                         required
                         value={formData.address}
                         onChange={(e) => handleInputChange('address', e.target.value)}
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="123 Main Street"
                       />
                     </div>
@@ -250,7 +250,7 @@ export default function CheckoutPage() {
                         type="text"
                         value={formData.apartment}
                         onChange={(e) => handleInputChange('apartment', e.target.value)}
-                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                        className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                         placeholder="Apartment, suite, unit, etc."
                       />
                     </div>
@@ -265,7 +265,7 @@ export default function CheckoutPage() {
                           required
                           value={formData.city}
                           onChange={(e) => handleInputChange('city', e.target.value)}
-                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                           placeholder="City"
                         />
                       </div>
@@ -279,7 +279,7 @@ export default function CheckoutPage() {
                           required
                           value={formData.state}
                           onChange={(e) => handleInputChange('state', e.target.value)}
-                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white focus:border-[#FF69B4] focus:outline-none transition-colors"
+                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white focus:border-[#22d3ee] focus:outline-none transition-colors"
                         >
                           <option value="">Select State</option>
                           <option value="CA">California</option>
@@ -298,7 +298,7 @@ export default function CheckoutPage() {
                           required
                           value={formData.zipCode}
                           onChange={(e) => handleInputChange('zipCode', e.target.value)}
-                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                           placeholder="12345"
                         />
                       </div>
@@ -309,7 +309,7 @@ export default function CheckoutPage() {
 
               {/* Step 3: Payment */}
               {currentStep >= 3 && (
-                <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+                <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
                   <h3 className="text-white font-semibold text-lg mb-6 flex items-center gap-2">
                     <Lock className="w-5 h-5 text-green-400" />
                     Payment Information
@@ -322,7 +322,7 @@ export default function CheckoutPage() {
                         key={method.id}
                         className={`flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer transition-all ${
                           formData.paymentMethod === method.id
-                            ? 'border-[#FF69B4] bg-[#FF69B4]/10'
+                            ? 'border-[#22d3ee] bg-[#22d3ee]/10'
                             : 'border-gray-600 hover:border-gray-500'
                         }`}
                       >
@@ -355,7 +355,7 @@ export default function CheckoutPage() {
                           required
                           value={formData.cardNumber}
                           onChange={(e) => handleInputChange('cardNumber', e.target.value)}
-                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                           placeholder="1234 5678 9012 3456"
                         />
                       </div>
@@ -370,7 +370,7 @@ export default function CheckoutPage() {
                             required
                             value={formData.expiryDate}
                             onChange={(e) => handleInputChange('expiryDate', e.target.value)}
-                            className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                            className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                             placeholder="MM/YY"
                           />
                         </div>
@@ -384,7 +384,7 @@ export default function CheckoutPage() {
                             required
                             value={formData.cvv}
                             onChange={(e) => handleInputChange('cvv', e.target.value)}
-                            className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                            className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                             placeholder="123"
                           />
                         </div>
@@ -399,7 +399,7 @@ export default function CheckoutPage() {
                           required
                           value={formData.nameOnCard}
                           onChange={(e) => handleInputChange('nameOnCard', e.target.value)}
-                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#FF69B4] focus:outline-none transition-colors"
+                          className="w-full px-3 py-3 bg-[#0D0D0D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#22d3ee] focus:outline-none transition-colors"
                           placeholder="John Doe"
                         />
                       </div>
@@ -414,7 +414,7 @@ export default function CheckoutPage() {
                   <button
                     type="button"
                     onClick={prevStep}
-                    className="px-6 py-3 border border-[#FF69B4] text-[#FF69B4] rounded-lg hover:bg-[#FF69B4] hover:text-black transition-colors"
+                    className="px-6 py-3 border border-[#22d3ee] text-[#22d3ee] rounded-lg hover:bg-[#22d3ee] hover:text-black transition-colors"
                   >
                     Previous
                   </button>
@@ -426,14 +426,14 @@ export default function CheckoutPage() {
                   <button
                     type="button"
                     onClick={nextStep}
-                    className="px-6 py-3 bg-[#FF69B4] text-black rounded-lg hover:bg-[#FF1493] transition-colors"
+                    className="px-6 py-3 bg-[#22d3ee] text-black rounded-lg hover:bg-[#0ea5e9] transition-colors"
                   >
                     Continue
                   </button>
                 ) : (
                   <button
                     type="submit"
-                    className="px-8 py-3 bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300"
+                    className="px-8 py-3 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-bold rounded-xl transition-all duration-300"
                   >
                     Complete Order
                   </button>
@@ -448,7 +448,7 @@ export default function CheckoutPage() {
             animate={{ opacity: 1, x: 0 }}
             className="lg:sticky lg:top-8 h-fit"
           >
-            <div className="bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl p-6">
+            <div className="bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl p-6">
               <h3 className="text-white font-semibold text-lg mb-6">Order Summary</h3>
               
               {/* Items */}
@@ -461,7 +461,7 @@ export default function CheckoutPage() {
                         {item.size} • {item.color} • Qty: {item.quantity}
                       </p>
                     </div>
-                    <span className="text-[#FF69B4] font-medium">
+                    <span className="text-[#22d3ee] font-medium">
                       ${(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>

@@ -15,13 +15,13 @@ const PolicySection = ({ icon: Icon, title, children }: {
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#FF69B4]/20 rounded-2xl p-8 backdrop-blur"
+    className="bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 border border-[#22d3ee]/20 rounded-2xl p-8 backdrop-blur"
   >
     <div className="flex items-center gap-3 mb-6">
-      <div className="p-3 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-xl">
+      <div className="p-3 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-xl">
         <Icon className="w-6 h-6 text-black" />
       </div>
-      <h2 className="text-2xl font-bold bg-linear-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+      <h2 className="text-2xl font-bold bg-linear-to-r from-[#22d3ee] to-[#FFD700] bg-clip-text text-transparent">
         {title}
       </h2>
     </div>
@@ -35,18 +35,18 @@ export default function ShippingReturnsPage() {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white font-[Lato]">
       {/* Header */}
-      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#FF69B4]/20">
+      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#22d3ee]/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-[#FF69B4] hover:text-[#FFD700] transition-colors mb-6 group"
+            className="inline-flex items-center gap-2 text-[#22d3ee] hover:text-[#FFD700] transition-colors mb-6 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
           
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
               Shipping &amp; Returns
             </h1>
             <p className="text-xl text-gray-300 mb-8">
@@ -60,9 +60,9 @@ export default function ShippingReturnsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center p-6 bg-linear-to-br from-[#FF69B4]/10 to-[#FF1493]/5 border border-[#FF69B4]/20 rounded-2xl">
-            <Truck className="w-8 h-8 text-[#FF69B4] mx-auto mb-3" />
-            <h3 className="font-bold text-[#FF69B4] mb-2">Free Shipping</h3>
+          <div className="text-center p-6 bg-linear-to-br from-[#22d3ee]/10 to-[#0ea5e9]/5 border border-[#22d3ee]/20 rounded-2xl">
+            <Truck className="w-8 h-8 text-[#22d3ee] mx-auto mb-3" />
+            <h3 className="font-bold text-[#22d3ee] mb-2">Free Shipping</h3>
             <p className="text-sm text-gray-400">On orders over $50</p>
           </div>
           <div className="text-center p-6 bg-linear-to-br from-[#1E90FF]/10 to-[#00FFFF]/5 border border-[#00FFFF]/20 rounded-2xl">
@@ -70,7 +70,7 @@ export default function ShippingReturnsPage() {
             <h3 className="font-bold text-[#00FFFF] mb-2">Fast Delivery</h3>
             <p className="text-sm text-gray-400">3-7 business days</p>
           </div>
-          <div className="text-center p-6 bg-linear-to-br from-[#FFD700]/10 to-[#FF6B6B]/5 border border-[#FFD700]/20 rounded-2xl">
+          <div className="text-center p-6 bg-linear-to-br from-[#FFD700]/10 to-[#14b8a6]/5 border border-[#FFD700]/20 rounded-2xl">
             <RotateCcw className="w-8 h-8 text-[#FFD700] mx-auto mb-3" />
             <h3 className="font-bold text-[#FFD700] mb-2">Quality Guarantee</h3>
             <p className="text-sm text-gray-400">Made-to-order perfection</p>
@@ -87,7 +87,7 @@ export default function ShippingReturnsPage() {
           {/* Shipping Policy */}
           <PolicySection icon={Truck} title="Shipping Information">
             <div>
-              <h3 className="text-lg font-semibold text-[#FF69B4] mb-3">Domestic Shipping (US)</h3>
+              <h3 className="text-lg font-semibold text-[#22d3ee] mb-3">Domestic Shipping (US)</h3>
               <ul className="space-y-2 mb-4">
                 <li><strong className="text-white">Free Standard Shipping:</strong> Orders $50+ (3-7 business days)</li>
                 <li><strong className="text-white">Standard Shipping:</strong> $8.99 (3-7 business days)</li>
@@ -110,7 +110,7 @@ export default function ShippingReturnsPage() {
           {/* Processing Time */}
           <PolicySection icon={Package} title="Order Processing">
             <div>
-              <h3 className="text-lg font-semibold text-[#FF69B4] mb-3">Processing Times</h3>
+              <h3 className="text-lg font-semibold text-[#22d3ee] mb-3">Processing Times</h3>
               <ul className="space-y-2 mb-4">
                 <li><strong className="text-white">Standard Items:</strong> 1-2 business days</li>
                 <li><strong className="text-white">Custom/Personalized:</strong> 3-5 business days</li>
@@ -135,7 +135,7 @@ export default function ShippingReturnsPage() {
           {/* Returns Policy */}
           <PolicySection icon={RotateCcw} title="Returns &amp; Exchanges">
             <div>
-              <h3 className="text-lg font-semibold text-[#FF69B4] mb-3">Made-to-Order Policy</h3>
+              <h3 className="text-lg font-semibold text-[#22d3ee] mb-3">Made-to-Order Policy</h3>
               <p className="text-gray-300 mb-4">
                 <strong>All PUPITO items are made-to-order</strong> just for you! This means each piece is custom printed when you place your order, ensuring the freshest quality and reducing waste. Due to the personalized nature of our products:
               </p>
@@ -174,7 +174,7 @@ export default function ShippingReturnsPage() {
           {/* International & Special Cases */}
           <PolicySection icon={Globe} title="Special Policies">
             <div>
-              <h3 className="text-lg font-semibold text-[#FF69B4] mb-3">International Returns</h3>
+              <h3 className="text-lg font-semibold text-[#22d3ee] mb-3">International Returns</h3>
               <ul className="space-y-2 mb-4">
                 <li><strong className="text-white">Same Policy:</strong> 30-day return window applies worldwide</li>
                 <li><strong className="text-white">Return Shipping:</strong> Customer covers international return shipping costs</li>
@@ -206,8 +206,8 @@ export default function ShippingReturnsPage() {
         </div>
 
         {/* Contact Section */}
-        <div className="text-center p-8 bg-linear-to-r from-[#FF69B4]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#FF69B4]/20 rounded-3xl">
-          <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+        <div className="text-center p-8 bg-linear-to-r from-[#22d3ee]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#22d3ee]/20 rounded-3xl">
+          <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-[#22d3ee] to-[#FFD700] bg-clip-text text-transparent">
             Questions About Your Order?
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -216,13 +216,13 @@ export default function ShippingReturnsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/help/contact"
-              className="bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)]"
+              className="bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)]"
             >
               Contact Support
             </Link>
             <Link
               href="/help/faq"
-              className="border-2 border-[#FF69B4] text-[#FF69B4] hover:bg-[#FF69B4] hover:text-black font-semibold px-8 py-3 rounded-xl transition-all duration-300"
+              className="border-2 border-[#22d3ee] text-[#22d3ee] hover:bg-[#22d3ee] hover:text-black font-semibold px-8 py-3 rounded-xl transition-all duration-300"
             >
               Check FAQ
             </Link>

@@ -107,7 +107,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D] flex items-center justify-center px-4 py-8">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#FF69B4]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#22d3ee]/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#1E90FF]/10 rounded-full blur-3xl animate-pulse [animation-delay:2s]" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FFD700]/5 rounded-full blur-3xl animate-pulse [animation-delay:4s]" />
       </div>
@@ -119,9 +119,9 @@ export default function LoginPage() {
         className="relative w-full max-w-md"
       >
         {/* Login Card */}
-        <div className="relative bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D] border-2 border-[#FF69B4] rounded-3xl p-8 overflow-hidden shadow-[0_0_50px_rgba(255,105,180,0.2)]">
+        <div className="relative bg-linear-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D] border-2 border-[#22d3ee] rounded-3xl p-8 overflow-hidden shadow-[0_0_50px_rgba(34,211,238,0.2)]">
           {/* Decorative Elements */}
-          <div className="absolute top-0 left-0 w-20 h-20 bg-linear-to-br from-[#FF69B4]/20 to-[#FF1493]/10 rounded-full blur-xl animate-pulse" />
+          <div className="absolute top-0 left-0 w-20 h-20 bg-linear-to-br from-[#22d3ee]/20 to-[#0ea5e9]/10 rounded-full blur-xl animate-pulse" />
           <div className="absolute bottom-0 right-0 w-32 h-32 bg-linear-to-br from-[#00FFFF]/15 to-[#1E90FF]/10 rounded-full blur-xl animate-pulse [animation-delay:1s]" />
 
           {/* Header */}
@@ -133,12 +133,12 @@ export default function LoginPage() {
           >
             {/* Logo */}
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,105,180,0.5)]">
+              <div className="w-16 h-16 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.45)]">
                 <span className="text-black font-bold text-2xl">P</span>
               </div>
             </div>
 
-            <h1 className="text-3xl font-black bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent mb-2">
+            <h1 className="text-3xl font-black bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent mb-2">
               {isSignUp ? 'JOIN PUPITO' : 'WELCOME BACK'}
             </h1>
             <p className="text-gray-300">
@@ -154,7 +154,7 @@ export default function LoginPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-linear-to-r from-[#1A1A1A]/80 to-[#2A2A2A]/80 rounded-2xl border border-[#FF69B4]/20 p-4 mb-6 backdrop-blur relative z-10"
+            className="bg-linear-to-r from-[#1A1A1A]/80 to-[#2A2A2A]/80 rounded-2xl border border-[#22d3ee]/20 p-4 mb-6 backdrop-blur relative z-10"
           >
             <div className="flex items-center gap-3 text-sm text-gray-300">
               <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />
@@ -198,8 +198,8 @@ export default function LoginPage() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className={`w-full px-4 py-3 pl-10 bg-[#0D0D0D]/80 border rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF69B4] transition-all ${
-                    errors.email ? 'border-red-500' : 'border-gray-600 hover:border-[#FF69B4]/50'
+                  className={`w-full px-4 py-3 pl-10 bg-[#0D0D0D]/80 border rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] transition-all ${
+                    errors.email ? 'border-red-500' : 'border-gray-600 hover:border-[#22d3ee]/50'
                   }`}
                   placeholder="Enter your email"
                   aria-label="Email Address"
@@ -227,8 +227,8 @@ export default function LoginPage() {
                   type={showPassword ? 'text' : 'password'}
                   value={formData.password}
                   onChange={(e) => handleInputChange('password', e.target.value)}
-                  className={`w-full px-4 py-3 pl-10 pr-10 bg-[#0D0D0D]/80 border rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF69B4] transition-all ${
-                    errors.password ? 'border-red-500' : 'border-gray-600 hover:border-[#FF69B4]/50'
+                  className={`w-full px-4 py-3 pl-10 pr-10 bg-[#0D0D0D]/80 border rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] transition-all ${
+                    errors.password ? 'border-red-500' : 'border-gray-600 hover:border-[#22d3ee]/50'
                   }`}
                   placeholder="Enter your password"
                   aria-label="Password"
@@ -261,14 +261,14 @@ export default function LoginPage() {
                   type="checkbox"
                   checked={formData.rememberMe}
                   onChange={(e) => handleInputChange('rememberMe', e.target.checked)}
-                  className="w-4 h-4 text-[#FF69B4] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#FF69B4] focus:ring-2"
+                  className="w-4 h-4 text-[#22d3ee] bg-[#0D0D0D] border-gray-600 rounded focus:ring-[#22d3ee] focus:ring-2"
                   disabled={isLoading}
                 />
                 Remember me
               </label>
               <Link
                 href="/forgot-password"
-                className="text-sm text-[#FF69B4] hover:text-[#FF1493] transition-colors"
+                className="text-sm text-[#22d3ee] hover:text-[#0ea5e9] transition-colors"
               >
                 Forgot password?
               </Link>
@@ -278,7 +278,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-white hover:text-black font-bold py-3 rounded-2xl shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:shadow-[0_0_30px_rgba(30,144,255,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-white hover:text-black font-bold py-3 rounded-2xl shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_30px_rgba(30,144,255,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <Loader className="w-5 h-5 animate-spin" />
@@ -307,7 +307,7 @@ export default function LoginPage() {
                   setErrors({})
                   setFormData({ email: '', password: '', firstName: '', lastName: '', rememberMe: false })
                 }}
-                className="text-[#FF69B4] hover:text-[#FF1493] transition-colors ml-1 font-medium"
+                className="text-[#22d3ee] hover:text-[#0ea5e9] transition-colors ml-1 font-medium"
                 disabled={isLoading}
               >
                 {isSignUp ? 'Sign in here' : 'Create account'}
@@ -334,7 +334,7 @@ export default function LoginPage() {
             <div className="mt-6 grid grid-cols-2 gap-3">
               <button
                 type="button"
-                className="w-full inline-flex justify-center py-3 px-4 rounded-2xl shadow-sm bg-[#0D0D0D] text-sm font-medium text-gray-300 border border-gray-600 hover:border-[#FF69B4]/50 hover:bg-[#1A1A1A] transition-all"
+                className="w-full inline-flex justify-center py-3 px-4 rounded-2xl shadow-sm bg-[#0D0D0D] text-sm font-medium text-gray-300 border border-gray-600 hover:border-[#22d3ee]/50 hover:bg-[#1A1A1A] transition-all"
                 disabled={isLoading}
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -348,7 +348,7 @@ export default function LoginPage() {
 
               <button
                 type="button"
-                className="w-full inline-flex justify-center py-3 px-4 rounded-2xl shadow-sm bg-[#0D0D0D] text-sm font-medium text-gray-300 border border-gray-600 hover:border-[#FF69B4]/50 hover:bg-[#1A1A1A] transition-all"
+                className="w-full inline-flex justify-center py-3 px-4 rounded-2xl shadow-sm bg-[#0D0D0D] text-sm font-medium text-gray-300 border border-gray-600 hover:border-[#22d3ee]/50 hover:bg-[#1A1A1A] transition-all"
                 disabled={isLoading}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -368,7 +368,7 @@ export default function LoginPage() {
           >
             <Link
               href="/products"
-              className="text-gray-400 hover:text-[#FF69B4] transition-colors text-sm flex items-center justify-center gap-1"
+              className="text-gray-400 hover:text-[#22d3ee] transition-colors text-sm flex items-center justify-center gap-1"
             >
               ← Back to Shop
             </Link>

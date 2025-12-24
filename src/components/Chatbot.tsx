@@ -189,19 +189,19 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
         exit={{ opacity: 0, scale: 0.8, y: 20 }}
         className="fixed bottom-6 right-6 z-50"
       >
-        <div className={`bg-linear-to-br from-[#0D0D0D] to-[#1A1A1A] border border-[#FF69B4]/30 rounded-2xl shadow-[0_0_40px_rgba(255,105,180,0.3)] backdrop-blur ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'} transition-all duration-300`}>
+        <div className={`bg-linear-to-br from-[#0D0D0D] to-[#1A1A1A] border border-[#22d3ee]/30 rounded-2xl shadow-[0_0_40px_rgba(34,211,238,0.3)] backdrop-blur ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'} transition-all duration-300`}>
           
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-[#FF69B4]/20">
+          <div className="flex items-center justify-between p-4 border-b border-[#22d3ee]/20">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="p-2 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-full">
+                <div className="p-2 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-full">
                   <Bot className="w-5 h-5 text-black" />
                 </div>
                 <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-[#32CD32] rounded-full border-2 border-[#0D0D0D]"></div>
               </div>
               <div>
-                <h3 className="font-bold text-[#FF69B4] text-lg">PupiBot</h3>
+                <h3 className="font-bold text-[#22d3ee] text-lg">PupiBot</h3>
                 <p className="text-xs text-[#32CD32]">Online • Anime Expert</p>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsMinimized(!isMinimized)}
-                className="p-2 hover:bg-[#FF69B4]/10 rounded-lg transition-colors"
+                className="p-2 hover:bg-[#22d3ee]/10 rounded-lg transition-colors"
                 aria-label={isMinimized ? "Maximize chatbot" : "Minimize chatbot"}
                 title={isMinimized ? "Maximize chatbot" : "Minimize chatbot"}
               >
@@ -217,7 +217,7 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
               </button>
               <button
                 onClick={onToggle}
-                className="p-2 hover:bg-[#FF69B4]/10 rounded-lg transition-colors"
+                className="p-2 hover:bg-[#22d3ee]/10 rounded-lg transition-colors"
                 aria-label="Close chatbot"
                 title="Close chatbot"
               >
@@ -239,11 +239,11 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
                       className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
                     >
                       <div className={`flex items-end gap-2 max-w-[80%] ${message.isBot ? '' : 'flex-row-reverse'}`}>
-                        <div className={`p-2 rounded-full shrink-0 ${message.isBot ? 'bg-linear-to-br from-[#FF69B4] to-[#FF1493]' : 'bg-linear-to-br from-[#00FFFF] to-[#1E90FF]'}`}>
+                        <div className={`p-2 rounded-full shrink-0 ${message.isBot ? 'bg-linear-to-br from-[#22d3ee] to-[#0ea5e9]' : 'bg-linear-to-br from-[#00FFFF] to-[#1E90FF]'}`}>
                           {message.isBot ? <Bot className="w-4 h-4 text-black" /> : <User className="w-4 h-4 text-black" />}
                         </div>
                         <div>
-                          <div className={`px-4 py-2 rounded-2xl ${message.isBot ? 'bg-[#1A1A1A] border border-[#FF69B4]/20' : 'bg-linear-to-r from-[#00FFFF] to-[#1E90FF] text-black'}`}>
+                          <div className={`px-4 py-2 rounded-2xl ${message.isBot ? 'bg-[#1A1A1A] border border-[#22d3ee]/20' : 'bg-linear-to-r from-[#00FFFF] to-[#1E90FF] text-black'}`}>
                             <p className={`text-sm ${message.isBot ? 'text-white' : 'text-black'}`}>
                               {message.text}
                             </p>
@@ -256,7 +256,7 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
                                 <button
                                   key={index}
                                   onClick={() => handleOptionClick(option)}
-                                  className="px-3 py-1 text-xs bg-[#FF69B4]/10 border border-[#FF69B4]/30 rounded-full text-[#FF69B4] hover:bg-[#FF69B4]/20 transition-colors"
+                                  className="px-3 py-1 text-xs bg-[#22d3ee]/10 border border-[#22d3ee]/30 rounded-full text-[#22d3ee] hover:bg-[#22d3ee]/20 transition-colors"
                                 >
                                   {option}
                                 </button>
@@ -283,14 +283,14 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
                       className="flex justify-start"
                     >
                       <div className="flex items-end gap-2">
-                        <div className="p-2 bg-linear-to-br from-[#FF69B4] to-[#FF1493] rounded-full">
+                        <div className="p-2 bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] rounded-full">
                           <Bot className="w-4 h-4 text-black" />
                         </div>
-                        <div className="px-4 py-2 bg-[#1A1A1A] border border-[#FF69B4]/20 rounded-2xl">
+                        <div className="px-4 py-2 bg-[#1A1A1A] border border-[#22d3ee]/20 rounded-2xl">
                           <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-[#FF69B4] rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-[#FF69B4] rounded-full animate-bounce [animation-delay:0.1s]"></div>
-                            <div className="w-2 h-2 bg-[#FF69B4] rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                            <div className="w-2 h-2 bg-[#22d3ee] rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-[#22d3ee] rounded-full animate-bounce [animation-delay:0.1s]"></div>
+                            <div className="w-2 h-2 bg-[#22d3ee] rounded-full animate-bounce [animation-delay:0.2s]"></div>
                           </div>
                         </div>
                       </div>
@@ -302,7 +302,7 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
               </div>
 
               {/* Input */}
-              <div className="p-4 border-t border-[#FF69B4]/20">
+              <div className="p-4 border-t border-[#22d3ee]/20">
                 <div className="flex gap-3">
                   <input
                     type="text"
@@ -310,13 +310,13 @@ export default function Chatbot({ isOpen, onToggle }: ChatbotProps) {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
-                    className="flex-1 px-4 py-3 bg-[#1A1A1A] border border-[#FF69B4]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF69B4] focus:border-[#FF1493] transition-all"
+                    className="flex-1 px-4 py-3 bg-[#1A1A1A] border border-[#22d3ee]/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-[#0ea5e9] transition-all"
                     disabled={isTyping}
                   />
                   <button
                     onClick={handleSendMessage}
                     disabled={!inputValue.trim() || isTyping}
-                    className="px-4 py-3 bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-3 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     aria-label="Send message"
                     title="Send message"
                   >

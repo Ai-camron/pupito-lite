@@ -160,15 +160,15 @@ export async function POST(request: NextRequest) {
           html: `
             <div style="background: #0D0D0D; color: white; padding: 20px; font-family: 'Segoe UI', Arial, sans-serif; border-radius: 12px;">
               <div style="text-align: center; margin-bottom: 20px;">
-                <h1 style="color: #FF69B4; margin: 0; font-size: 24px; text-shadow: 0 0 10px rgba(255,105,180,0.5);">
+                <h1 style="color: #22d3ee; margin: 0; font-size: 24px; text-shadow: 0 0 10px rgba(34,211,238,0.45);">
                   PUPITO Pup Squad Alert! 🚀
                 </h1>
               </div>
               
-              <div style="background: linear-gradient(135deg, #FF69B4, #1E90FF); padding: 2px; border-radius: 8px; margin: 15px 0;">
+              <div style="background: linear-gradient(135deg, #22d3ee, #1E90FF); padding: 2px; border-radius: 8px; margin: 15px 0;">
                 <div style="background: #1A1A1A; padding: 15px; border-radius: 6px;">
                   <h3 style="color: #FFD700; margin-top: 0;">New Squad Member Details:</h3>
-                  <p style="margin: 8px 0;"><strong style="color: #00FFFF;">Email:</strong> <span style="color: #FF69B4;">${email}</span></p>
+                  <p style="margin: 8px 0;"><strong style="color: #00FFFF;">Email:</strong> <span style="color: #22d3ee;">${email}</span></p>
                   <p style="margin: 8px 0;"><strong style="color: #00FFFF;">Signup Date:</strong> ${new Date().toLocaleString()}</p>
                   <p style="margin: 8px 0;"><strong style="color: #00FFFF;">Total Squad Members:</strong> <span style="color: #32CD32; font-size: 18px; font-weight: bold;">${emailData.emails.length}</span></p>
                 </div>
@@ -200,11 +200,11 @@ export async function POST(request: NextRequest) {
               <div style="text-align: center; margin-bottom: 40px;">
                 <!-- PUPITO Logo -->
                 <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                  <div style="background: linear-gradient(135deg, #FF69B4, #FF1493); padding: 12px; border-radius: 12px; box-shadow: 0 0 30px rgba(255,105,180,0.4);">
+                  <div style="background: linear-gradient(135deg, #22d3ee, #0ea5e9); padding: 12px; border-radius: 12px; box-shadow: 0 0 30px rgba(34,211,238,0.35);">
                     <span style="font-size: 24px; font-weight: 900; color: black; font-family: 'Lato', 'Segoe UI', Arial, sans-serif;">P</span>
                   </div>
                   <div>
-                    <h1 style="color: #FF69B4; margin: 0; font-size: 32px; font-weight: 900; font-family: 'Lato', 'Segoe UI', Arial, sans-serif; text-shadow: 0 0 20px rgba(255,105,180,0.5); letter-spacing: 1px;">
+                    <h1 style="color: #22d3ee; margin: 0; font-size: 32px; font-weight: 900; font-family: 'Lato', 'Segoe UI', Arial, sans-serif; text-shadow: 0 0 20px rgba(34,211,238,0.45); letter-spacing: 1px;">
                       PUPITO
                     </h1>
                     <p style="color: #FFD700; font-size: 14px; margin: 2px 0 0 0; letter-spacing: 2px; font-weight: 600; font-family: 'Lato', 'Segoe UI', Arial, sans-serif;">
@@ -215,7 +215,7 @@ export async function POST(request: NextRequest) {
               </div>
 
               <!-- Welcome Message -->
-              <div style="background: linear-gradient(135deg, #FF69B4, #1E90FF); padding: 3px; border-radius: 16px; margin: 30px 0;">
+              <div style="background: linear-gradient(135deg, #22d3ee, #1E90FF); padding: 3px; border-radius: 16px; margin: 30px 0;">
                 <div style="background: #1A1A1A; padding: 30px; border-radius: 13px; text-align: center;">
                   <h2 style="color: #FFD700; margin: 0 0 15px 0; font-size: 28px; font-weight: 900; font-family: 'Lato', 'Segoe UI', Arial, sans-serif; letter-spacing: 1px;">
                     WELCOME TO THE SQUAD! 🚀
@@ -233,8 +233,8 @@ export async function POST(request: NextRequest) {
                 </h3>
                 
                 <div style="margin: 20px 0;">
-                  <div style="background: rgba(255,105,180,0.1); border-left: 4px solid #FF69B4; padding: 20px; margin: 15px 0; border-radius: 8px;">
-                    <div style="color: #FF69B4; font-weight: 700; font-size: 16px; margin-bottom: 5px;">🎁 Early Access</div>
+                  <div style="background: rgba(34,211,238,0.12); border-left: 4px solid #22d3ee; padding: 20px; margin: 15px 0; border-radius: 8px;">
+                    <div style="color: #22d3ee; font-weight: 700; font-size: 16px; margin-bottom: 5px;">🎁 Early Access</div>
                     <div style="color: #CCCCCC; font-size: 14px;">First look at new collections and limited drops</div>
                   </div>
                   
@@ -252,13 +252,13 @@ export async function POST(request: NextRequest) {
 
               <!-- Call to Action -->
               <div style="text-align: center; margin: 40px 0;">
-                <div style="background: linear-gradient(135deg, #FF69B4, #1E90FF); padding: 3px; border-radius: 30px; display: inline-block;">
+                <div style="background: linear-gradient(135deg, #22d3ee, #1E90FF); padding: 3px; border-radius: 30px; display: inline-block;">
                   <div style="background: #0D0D0D; color: white; padding: 18px 35px; border-radius: 27px; font-weight: bold; font-size: 18px;">
                     🛒 Start Shopping
                   </div>
                 </div>
                 <p style="color: #AAAAAA; font-size: 14px; margin-top: 15px;">
-                  Use code <strong style="color: #FF69B4; background: rgba(255,105,180,0.1); padding: 2px 8px; border-radius: 4px;">FIRSTPUP</strong> for 10% off your first order
+                  Use code <strong style="color: #22d3ee; background: rgba(34,211,238,0.12); padding: 2px 8px; border-radius: 4px;">FIRSTPUP</strong> for 10% off your first order
                 </p>
               </div>
 

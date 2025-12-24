@@ -14,7 +14,8 @@ import {
   Package,
   HelpCircle,
   LogIn,
-  LogOut
+  LogOut,
+  ShieldCheck
 } from 'lucide-react'
 import styles from './Navigation.module.css'
 import { useAuth } from '@/lib/auth-context'
@@ -92,7 +93,10 @@ export default function Navigation({ currentPath = '', cartCount = 0 }: Navigati
               <Home className={styles.navIcon} />
               Home
             </Link>
-            {NAV_LINKS.map((link) => {
+            {[
+              ...NAV_LINKS,
+              ...(user ? [{ label: 'Client Dashboard', href: '/client-dashboard', icon: ShieldCheck }] : [])
+            ].map((link) => {
               const Icon = link.icon
               return (
                 <Link
@@ -210,7 +214,7 @@ export default function Navigation({ currentPath = '', cartCount = 0 }: Navigati
               <Home className={styles.mobileNavIcon} />
               Home
             </Link>
-            {NAV_LINKS.map((link) => {
+            {[...NAV_LINKS, ...(user ? [{ label: 'Client Dashboard', href: '/client-dashboard', icon: ShieldCheck }] : [])].map((link) => {
               const Icon = link.icon
               return (
                 <Link
