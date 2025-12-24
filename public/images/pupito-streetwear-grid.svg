@@ -1,0 +1,41 @@
+<svg width="1440" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0E0F15"/>
+      <stop offset="1" stop-color="#0B0C10"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1E90FF"/>
+      <stop offset="1" stop-color="#FF69B4"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#FFD700" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#00FFFF" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="320" fill="url(#bg)"/>
+  <g opacity="0.25" stroke="url(#stroke)" stroke-width="1">
+    <path d="M80 40h1280M80 100h1280M80 160h1280M80 220h1280M80 280h1280"/>
+    <path d="M180 20v280M420 20v280M720 20v280M1020 20v280M1260 20v280"/>
+  </g>
+  <g opacity="0.8">
+    <rect x="160" y="70" width="210" height="180" rx="18" fill="url(#fill)" stroke="url(#stroke)" stroke-width="3"/>
+    <text x="265" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="16" font-weight="800">Tees</text>
+    <text x="265" y="174" text-anchor="middle" fill="#FFD700" font-family="Inter, 'Segoe UI', system-ui" font-size="12" letter-spacing="0.18em">DROP READY</text>
+  </g>
+  <g opacity="0.8">
+    <rect x="430" y="60" width="230" height="200" rx="18" fill="url(#fill)" stroke="url(#stroke)" stroke-width="3"/>
+    <text x="545" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="16" font-weight="800">Hoodies</text>
+    <text x="545" y="174" text-anchor="middle" fill="#00FFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="12" letter-spacing="0.18em">GLOW LINED</text>
+  </g>
+  <g opacity="0.8">
+    <rect x="720" y="70" width="220" height="180" rx="18" fill="url(#fill)" stroke="url(#stroke)" stroke-width="3"/>
+    <text x="830" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="16" font-weight="800">Joggers</text>
+    <text x="830" y="174" text-anchor="middle" fill="#FF69B4" font-family="Inter, 'Segoe UI', system-ui" font-size="12" letter-spacing="0.18em">RUNNER PACK</text>
+  </g>
+  <g opacity="0.8">
+    <rect x="1000" y="80" width="220" height="170" rx="18" fill="url(#fill)" stroke="url(#stroke)" stroke-width="3"/>
+    <text x="1110" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="16" font-weight="800">Accessories</text>
+    <text x="1110" y="172" text-anchor="middle" fill="#FFD700" font-family="Inter, 'Segoe UI', system-ui" font-size="12" letter-spacing="0.18em">BADGES & CAPS</text>
+  </g>
+</svg>

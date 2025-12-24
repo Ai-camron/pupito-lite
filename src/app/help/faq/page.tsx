@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowLeft, MessageCircle, Mail, Clock } from "lucide-react";
+import { STORE_CONTACT } from "@/lib/constants";
+import OnlineStoreCallout from "@/components/OnlineStoreCallout";
 
 const FAQ_DATA = [
   {
@@ -65,7 +67,7 @@ const FAQ_DATA = [
       },
       {
         q: "How do I report a problem with my order?",
-        a: "Email us at hello@pupito.com within 30 days of delivery with clear photos of any print or product issues. Include your order number and we'll respond within 24 hours with a solution - either a replacement or full refund."
+        a: `Email us at ${STORE_CONTACT.email} within 30 days of delivery with clear photos of any print or product issues. Include your order number and we'll respond within 24 hours with a solution - either a replacement or full refund.`
       }
     ]
   },
@@ -101,16 +103,16 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: {
   <motion.div
     initial={{ opacity: 0, y: 10 }}
     animate={{ opacity: 1, y: 0 }}
-    className="border border-[#FF69B4]/20 rounded-2xl bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 backdrop-blur overflow-hidden"
+    className="border border-[#22d3ee]/20 rounded-2xl bg-linear-to-br from-[#1A1A1A]/80 to-[#2A2A2A]/60 backdrop-blur overflow-hidden"
   >
     <button
       onClick={onToggle}
-      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#FF69B4]/5 transition-all duration-300 group"
+      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#22d3ee]/5 transition-all duration-300 group"
     >
-      <span className="text-base font-semibold text-white group-hover:text-[#FF69B4] transition-colors">
+      <span className="text-base font-semibold text-white group-hover:text-[#22d3ee] transition-colors">
         {question}
       </span>
-      <div className="text-[#FF69B4] group-hover:text-[#FFD700] transition-colors">
+      <div className="text-[#22d3ee] group-hover:text-[#FFD700] transition-colors">
         {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
       </div>
     </button>
@@ -121,7 +123,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="overflow-hidden"
     >
-      <div className="px-6 pb-4 border-t border-[#FF69B4]/10">
+      <div className="px-6 pb-4 border-t border-[#22d3ee]/10">
         <p className="text-gray-300 leading-relaxed pt-4">
           {answer}
         </p>
@@ -148,7 +150,7 @@ const CategorySection = ({ category, questions }: {
 
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-black mb-6 bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
+      <h3 className="text-2xl font-black mb-6 bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
         {category}
       </h3>
       <div className="space-y-4">
@@ -170,18 +172,18 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white font-[Lato]">
       {/* Header */}
-      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#FF69B4]/20">
+      <div className="bg-linear-to-r from-[#1A1A1A] via-[#0D0D0D] to-[#1A1A1A] border-b border-[#22d3ee]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-[#FF69B4] hover:text-[#FFD700] transition-colors mb-6 group"
+            className="inline-flex items-center gap-2 text-[#22d3ee] hover:text-[#FFD700] transition-colors mb-6 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
           
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#FF69B4] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl font-black mb-4 bg-linear-to-r from-[#22d3ee] via-[#FFD700] to-[#00FFFF] bg-clip-text text-transparent">
               FAQ
             </h1>
             <p className="text-xl text-gray-300 mb-8">
@@ -194,25 +196,25 @@ export default function FAQPage() {
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Quick Contact */}
-        <div className="bg-linear-to-r from-[#FF69B4]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#FF69B4]/20 rounded-3xl p-8 mb-12">
+        <div className="bg-linear-to-r from-[#22d3ee]/10 via-[#8A2BE2]/10 to-[#00FFFF]/10 border border-[#22d3ee]/20 rounded-3xl p-8 mb-12">
           <h2 className="text-2xl font-bold text-center mb-6 text-[#FFD700]">
             Still Need Help? 🤝
           </h2>
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="space-y-2">
-              <MessageCircle className="w-8 h-8 text-[#FF69B4] mx-auto" />
-              <h3 className="font-semibold text-[#FF69B4]">Live Chat</h3>
+              <MessageCircle className="w-8 h-8 text-[#22d3ee] mx-auto" />
+              <h3 className="font-semibold text-[#22d3ee]">Live Chat</h3>
               <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM PST</p>
             </div>
             <div className="space-y-2">
               <Mail className="w-8 h-8 text-[#00FFFF] mx-auto" />
               <h3 className="font-semibold text-[#00FFFF]">Email Support</h3>
-              <p className="text-sm text-gray-400">hello@pupito.com</p>
+              <p className="text-sm text-gray-400">{STORE_CONTACT.email}</p>
             </div>
             <div className="space-y-2">
               <Clock className="w-8 h-8 text-[#FFD700] mx-auto" />
               <h3 className="font-semibold text-[#FFD700]">Response Time</h3>
-              <p className="text-sm text-gray-400">Usually within 4 hours</p>
+              <p className="text-sm text-gray-400">{STORE_CONTACT.responseTime}</p>
             </div>
           </div>
         </div>
@@ -227,8 +229,8 @@ export default function FAQPage() {
         ))}
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 p-8 bg-linear-to-r from-[#1A1A1A]/60 to-[#2A2A2A]/40 border border-[#FF69B4]/20 rounded-3xl">
-          <h3 className="text-2xl font-bold mb-4 text-[#FF69B4]">
+        <div className="text-center mt-16 p-8 bg-linear-to-r from-[#1A1A1A]/60 to-[#2A2A2A]/40 border border-[#22d3ee]/20 rounded-3xl">
+          <h3 className="text-2xl font-bold mb-4 text-[#22d3ee]">
             Didn&apos;t Find What You&apos;re Looking For?
           </h3>
           <p className="text-gray-300 mb-6">
@@ -236,10 +238,15 @@ export default function FAQPage() {
           </p>
           <Link
             href="/help/contact"
-            className="inline-block bg-linear-to-r from-[#FF69B4] to-[#FF1493] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)]"
+            className="inline-block bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_25px_rgba(30,144,255,0.5)]"
           >
             Contact Support
           </Link>
+        </div>
+
+        {/* Online Store Info */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <OnlineStoreCallout variant="compact" />
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Instagram, Youtube, Twitter, MessageCircle } from 'lucide-react'
+import { STORE_CONTACT, STORE_INFO } from '@/lib/constants'
 
 const footerLinks = {
   about: [
@@ -14,10 +15,10 @@ const footerLinks = {
     { label: 'Contact', href: '/help/contact' }
   ],
   shop: [
-    { label: 'All Products', href: '/products' },
-    { label: 'New Arrivals', href: '/products' },
-    { label: 'Limited Drops', href: '/products' },
-    { label: 'Gift Cards', href: '/products' }
+    { label: 'All Products', href: '/shop' },
+    { label: 'New Arrivals', href: '/shop#featured' },
+    { label: 'Limited Drops', href: '/shop#collections' },
+    { label: 'Gift Cards', href: '/shop' }
   ]
 }
 
@@ -30,10 +31,10 @@ const socialIcons = [
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-linear-to-t from-[#000000] via-[#0D0D0D] to-[#1A1A1A] text-white pt-8 pb-4 border-t border-[#FF69B4]/20">
+    <footer className="bg-linear-to-t from-[#000000] via-[#0D0D0D] to-[#1A1A1A] text-white pt-8 pb-4 border-t border-[#22d3ee]/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
         <div>
-          <h4 className="font-semibold mb-2 bg-linear-to-r from-[#FF69B4] to-[#FF1493] bg-clip-text text-transparent">
+          <h4 className="font-semibold mb-2 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] bg-clip-text text-transparent">
             About
           </h4>
           <p className="text-white/70 leading-relaxed">
@@ -47,7 +48,7 @@ export default function SiteFooter() {
           <ul className="space-y-1 text-white/70">
             {footerLinks.help.map((item) => (
               <li key={item.label}>
-                <Link href={item.href ?? '#'} className="hover:text-[#FF69B4] transition-colors cursor-pointer">
+                <Link href={item.href ?? '#'} className="hover:text-[#22d3ee] transition-colors cursor-pointer">
                   {item.label}
                 </Link>
               </li>
@@ -55,13 +56,13 @@ export default function SiteFooter() {
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold mb-2 bg-linear-to-r from-[#FFD700] to-[#FF6B6B] bg-clip-text text-transparent">
+          <h4 className="font-semibold mb-2 bg-linear-to-r from-[#FFD700] to-[#14b8a6] bg-clip-text text-transparent">
             Shop
           </h4>
           <ul className="space-y-1 text-white/70">
             {footerLinks.shop.map((item) => (
               <li key={item.label}>
-                <Link href={item.href ?? '#'} className="hover:text-[#FF69B4] transition-colors cursor-pointer">
+                <Link href={item.href ?? '#'} className="hover:text-[#22d3ee] transition-colors cursor-pointer">
                   {item.label}
                 </Link>
               </li>
@@ -69,23 +70,30 @@ export default function SiteFooter() {
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold mb-2 bg-linear-to-r from-[#8A2BE2] to-[#FF00FF] bg-clip-text text-transparent">
+          <h4 className="font-semibold mb-2 bg-linear-to-r from-[#8A2BE2] to-[#6366f1] bg-clip-text text-transparent">
             Socials
           </h4>
           <div className="flex items-center gap-3 mb-2">
             {socialIcons.map(({ icon: Icon, label }) => (
-              <Icon key={label} className="w-4 h-4 hover:text-[#FF69B4] transition-colors cursor-pointer" />
+              <Icon key={label} className="w-4 h-4 hover:text-[#22d3ee] transition-colors cursor-pointer" />
             ))}
           </div>
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-white/50">
         <div>© {new Date().getFullYear()} PUPITO. All rights reserved.</div>
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
           <span>Privacy</span>
           <span>Terms</span>
           <span>Accessibility</span>
+          <span className="hidden sm:inline">•</span>
+          <span className="text-white/70">Contact: {STORE_CONTACT.email}</span>
         </div>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 text-center">
+        <p className="text-xs text-white/40">
+          Fulfillment by {STORE_INFO.fulfillmentPartner} • Newsletter powered by {STORE_INFO.emailProvider}
+        </p>
       </div>
     </footer>
   )

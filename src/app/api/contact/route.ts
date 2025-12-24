@@ -145,10 +145,10 @@ export async function POST(request: NextRequest) {
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 30px;">
               <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                <div style="background: linear-gradient(135deg, #FF69B4, #FF1493); padding: 10px; border-radius: 10px; box-shadow: 0 0 25px rgba(255,105,180,0.4);">
+                <div style="background: linear-gradient(135deg, #22d3ee, #0ea5e9); padding: 10px; border-radius: 10px; box-shadow: 0 0 25px rgba(34,211,238,0.35);">
                   <span style="font-size: 20px; font-weight: 900; color: black;">P</span>
                 </div>
-                <h1 style="color: #FF69B4; margin: 0; font-size: 24px; font-weight: 900; text-shadow: 0 0 15px rgba(255,105,180,0.5);">
+                <h1 style="color: #22d3ee; margin: 0; font-size: 24px; font-weight: 900; text-shadow: 0 0 15px rgba(34,211,238,0.45);">
                   PUPITO
                 </h1>
               </div>
@@ -158,28 +158,28 @@ export async function POST(request: NextRequest) {
             </div>
 
             <!-- Customer Info -->
-            <div style="background: linear-gradient(135deg, #FF69B4, #1E90FF); padding: 2px; border-radius: 12px; margin: 25px 0;">
+            <div style="background: linear-gradient(135deg, #22d3ee, #1E90FF); padding: 2px; border-radius: 12px; margin: 25px 0;">
               <div style="background: #1A1A1A; padding: 25px; border-radius: 10px;">
                 <h3 style="color: #00FFFF; margin: 0 0 20px 0; font-size: 18px; font-weight: 700;">Customer Details:</h3>
                 
                 <div style="display: grid; gap: 15px;">
                   <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #FF69B4; font-weight: 600; min-width: 80px;">👤 Name:</span>
+                    <span style="color: #22d3ee; font-weight: 600; min-width: 80px;">👤 Name:</span>
                     <span style="color: white; font-size: 16px;">${name}</span>
                   </div>
                   
                   <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #FF69B4; font-weight: 600; min-width: 80px;">📧 Email:</span>
+                    <span style="color: #22d3ee; font-weight: 600; min-width: 80px;">📧 Email:</span>
                     <a href="mailto:${email}" style="color: #00FFFF; text-decoration: none; font-size: 16px;">${email}</a>
                   </div>
                   
                   <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #FF69B4; font-weight: 600; min-width: 80px;">📂 Topic:</span>
+                    <span style="color: #22d3ee; font-weight: 600; min-width: 80px;">📂 Topic:</span>
                     <span style="color: #FFD700; font-size: 16px; font-weight: 600;">${subject.charAt(0).toUpperCase() + subject.slice(1)}</span>
                   </div>
                   
                   <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #FF69B4; font-weight: 600; min-width: 80px;">🕒 Time:</span>
+                    <span style="color: #22d3ee; font-weight: 600; min-width: 80px;">🕒 Time:</span>
                     <span style="color: white; font-size: 14px;">${new Date().toLocaleString()}</span>
                   </div>
                 </div>
@@ -187,10 +187,10 @@ export async function POST(request: NextRequest) {
             </div>
 
             <!-- Message Content -->
-            <div style="background: linear-gradient(135deg, #FFD700, #FF6B6B); padding: 2px; border-radius: 12px; margin: 25px 0;">
+            <div style="background: linear-gradient(135deg, #FFD700, #14b8a6); padding: 2px; border-radius: 12px; margin: 25px 0;">
               <div style="background: #1A1A1A; padding: 25px; border-radius: 10px;">
                 <h3 style="color: #FFD700; margin: 0 0 15px 0; font-size: 18px; font-weight: 700;">💬 Message:</h3>
-                <div style="background: #0D0D0D; padding: 20px; border-radius: 8px; border-left: 4px solid #FF69B4;">
+                <div style="background: #0D0D0D; padding: 20px; border-radius: 8px; border-left: 4px solid #22d3ee;">
                   <p style="color: white; font-size: 15px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${message}</p>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export async function POST(request: NextRequest) {
             <!-- Action Buttons -->
             <div style="text-align: center; margin: 30px 0;">
               <a href="mailto:${email}?subject=Re: ${subject.charAt(0).toUpperCase() + subject.slice(1)} - PUPITO Support" 
-                 style="display: inline-block; background: linear-gradient(135deg, #FF69B4, #FF1493); color: black; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; margin: 0 10px; box-shadow: 0 0 20px rgba(255,105,180,0.4);">
+                 style="display: inline-block; background: linear-gradient(135deg, #22d3ee, #0ea5e9); color: black; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; margin: 0 10px; box-shadow: 0 0 20px rgba(34,211,238,0.35);">
                 📧 Reply to Customer
               </a>
             </div>
@@ -233,11 +233,11 @@ export async function POST(request: NextRequest) {
             <!-- Header with Logo -->
             <div style="text-align: center; margin-bottom: 30px;">
               <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                <div style="background: linear-gradient(135deg, #FF69B4, #FF1493); padding: 12px; border-radius: 12px; box-shadow: 0 0 30px rgba(255,105,180,0.4);">
+                <div style="background: linear-gradient(135deg, #22d3ee, #0ea5e9); padding: 12px; border-radius: 12px; box-shadow: 0 0 30px rgba(34,211,238,0.35);">
                   <span style="font-size: 24px; font-weight: 900; color: black;">P</span>
                 </div>
                 <div>
-                  <h1 style="color: #FF69B4; margin: 0; font-size: 28px; font-weight: 900; text-shadow: 0 0 20px rgba(255,105,180,0.5);">
+                  <h1 style="color: #22d3ee; margin: 0; font-size: 28px; font-weight: 900; text-shadow: 0 0 20px rgba(34,211,238,0.45);">
                     PUPITO
                   </h1>
                   <p style="color: #FFD700; font-size: 12px; margin: 2px 0 0 0; letter-spacing: 2px; font-weight: 600;">
@@ -263,8 +263,8 @@ export async function POST(request: NextRequest) {
             <div style="margin: 25px 0;">
               <h3 style="color: #00FFFF; font-size: 18px; margin-bottom: 15px; text-align: center;">What happens next:</h3>
               
-              <div style="background: rgba(255,105,180,0.1); border-left: 4px solid #FF69B4; padding: 15px; margin: 10px 0; border-radius: 8px;">
-                <div style="color: #FF69B4; font-weight: 700; margin-bottom: 5px;">📧 We'll Review Your Message</div>
+              <div style="background: rgba(34,211,238,0.12); border-left: 4px solid #22d3ee; padding: 15px; margin: 10px 0; border-radius: 8px;">
+                <div style="color: #22d3ee; font-weight: 700; margin-bottom: 5px;">📧 We'll Review Your Message</div>
                 <div style="color: #CCCCCC; font-size: 14px;">Our team will carefully read through your message about: <strong style="color: #FFD700;">${subject.charAt(0).toUpperCase() + subject.slice(1)}</strong></div>
               </div>
               
@@ -283,7 +283,7 @@ export async function POST(request: NextRequest) {
             <div style="background: rgba(50,50,50,0.3); padding: 20px; border-radius: 12px; margin: 25px 0;">
               <h3 style="color: #FFD700; font-size: 16px; margin: 0 0 15px 0; text-align: center;">While you wait, check out:</h3>
               <div style="text-align: center;">
-                <a href="http://localhost:3000/help/faq" style="display: inline-block; color: #FF69B4; text-decoration: none; margin: 5px 10px; font-weight: 600;">🤔 FAQ</a>
+                <a href="http://localhost:3000/help/faq" style="display: inline-block; color: #22d3ee; text-decoration: none; margin: 5px 10px; font-weight: 600;">🤔 FAQ</a>
                 <a href="http://localhost:3000/help/shipping" style="display: inline-block; color: #00FFFF; text-decoration: none; margin: 5px 10px; font-weight: 600;">📦 Shipping Info</a>
                 <a href="http://localhost:3000/help/size-guide" style="display: inline-block; color: #FFD700; text-decoration: none; margin: 5px 10px; font-weight: 600;">📏 Size Guide</a>
               </div>
@@ -291,7 +291,7 @@ export async function POST(request: NextRequest) {
 
             <!-- Message Summary -->
             <div style="background: #1A1A1A; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 25px 0;">
-              <h4 style="color: #FF69B4; margin: 0 0 10px 0; font-size: 14px;">Your Message Summary:</h4>
+              <h4 style="color: #22d3ee; margin: 0 0 10px 0; font-size: 14px;">Your Message Summary:</h4>
               <p style="color: #999; font-size: 13px; margin: 5px 0;"><strong>Topic:</strong> ${subject.charAt(0).toUpperCase() + subject.slice(1)}</p>
               <p style="color: #999; font-size: 13px; margin: 5px 0;"><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
               <p style="color: #999; font-size: 13px; margin: 5px 0;"><strong>Reference ID:</strong> #${Date.now().toString().slice(-8)}</p>
