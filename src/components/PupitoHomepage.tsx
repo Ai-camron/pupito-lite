@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SignupPopup from "@/components/SignupPopup";
 import Chatbot from "@/components/Chatbot";
+import globalStyles from "./Navigation.module.css";
 
 // PUPITO Dark Mode Variant
 // Theme: Neon Noir x Anime Streetwear
@@ -68,6 +69,27 @@ const TESTIMONIALS = [
     id: 2,
     name: "Mika / @SakuraSketch",
     text: "The Neon Kitsune hoodie glows under club lights. It's streetwear and story in one.",
+  },
+];
+
+const BRAND_ART = [
+  {
+    title: "Pupito Crest Patch",
+    description: "A midnight badge for the pack — stitched gradients that glow under city lights.",
+    image: "/images/pupito-crest.svg",
+    alt: "Pupito crest patch with neon paw print",
+  },
+  {
+    title: "Sticker Wall Drop",
+    description: "Collectible stickers that stack your story with holographic Pupito icons.",
+    image: "/images/pupito-sticker-wall.svg",
+    alt: "Collage of Pupito stickers with neon outlines",
+  },
+  {
+    title: "Arcade Aura Poster",
+    description: "Limited screen print that blends anime heat with Pupito’s neon noir palette.",
+    image: "/images/pupito-arcade-aura.svg",
+    alt: "Poster artwork with Pupito mascot in an arcade glow",
   },
 ];
 
@@ -141,16 +163,26 @@ const PUPITOHomepage = () => {
           {/* Background Image */}
           <div className="absolute inset-0 rounded-3xl">
             <Image
-              src="/images/placeholder-hero.svg"
-              alt="Anime streetwear hero background"
+              src="/images/pupito-lookbook-hero.svg"
+              alt="Pupito streetwear looks styled in a neon city backdrop"
               fill
-              className="object-cover opacity-40"
+              className="object-cover opacity-55"
               priority
             />
           </div>
           {/* Enhanced gradient overlay */}
-          <div className="absolute inset-0 bg-linear-to-br from-[#0ea5e9]/30 via-[#0D0D0D]/40 to-[#00FFFF]/30 rounded-3xl" />
-          <div className="absolute inset-0 bg-linear-to-t from-[#0D0D0D]/60 via-transparent to-[#22d3ee]/10 rounded-3xl" />
+          <div className="absolute inset-0 bg-linear-to-br from-[#FF1493]/30 via-[#0D0D0D]/40 to-[#00FFFF]/30 rounded-3xl" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#0D0D0D]/60 via-transparent to-[#FF69B4]/10 rounded-3xl" />
+          <div className="absolute top-6 right-6">
+            <Image
+              src="/images/pupito-crest.svg"
+              alt="Pupito neon crest badge"
+              width={120}
+              height={120}
+              className="drop-shadow-[0_10px_25px_rgba(255,105,180,0.5)]"
+              priority
+            />
+          </div>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,6 +190,9 @@ const PUPITOHomepage = () => {
             transition={{ duration: 0.5 }}
             className="relative z-10 px-4 flex flex-col items-center gap-4"
           >
+            <p className={`${globalStyles.glow} text-xs uppercase tracking-[0.3em] text-[#FFD700] bg-[#0D0D0D]/60 px-3 py-2 rounded-full border border-[#FFD700]/40 shadow-[0_0_20px_rgba(255,215,0,0.25)]`}>
+              Pupito Design House
+            </p>
             <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white drop-shadow-[0_6px_12px_rgba(255,20,147,0.6)]">
               WEAR YOUR STORY
             </h1>
@@ -177,6 +212,54 @@ const PUPITOHomepage = () => {
               </Link>
             </div>
           </motion.div>
+        </div>
+      </Section>
+
+      {/* BRAND DESIGN */}
+      <Section id="design-lab">
+        <div className="relative overflow-hidden rounded-3xl border border-[#FF69B4]/15 bg-linear-to-br from-[#0F0F10] via-[#0C0C0F] to-[#111118] mb-8">
+          <div className="absolute inset-0 pointer-events-none opacity-60">
+            <Image
+              src="/images/pupito-collection-mesh.svg"
+              alt="Pattern of Pupito patches, tees, and hoodies"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative flex flex-col gap-2 text-center px-5 sm:px-8 py-8">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#00FFFF]">Pupito Visual Lab</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-white">Original art you can wear</h2>
+            <p className="text-sm text-gray-300 max-w-2xl mx-auto">
+              Every drop ships with bespoke Pupito artwork — crest patches, sticker walls, and posters that amplify your fits.
+            </p>
+          </div>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {BRAND_ART.map((art) => (
+            <Card
+              key={art.title}
+              className="bg-linear-to-b from-[#121212] to-[#1A1A1A] border border-[#1E90FF]/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(30,144,255,0.2)]"
+            >
+              <CardContent className="p-0 flex flex-col h-full">
+                <div className="relative h-40 bg-linear-to-br from-[#1E90FF]/10 via-[#FF69B4]/10 to-[#FFD700]/10">
+                  <Image
+                    src={art.image}
+                    alt={art.alt}
+                    fill
+                    className="object-contain p-6 drop-shadow-[0_6px_20px_rgba(255,105,180,0.35)]"
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                  />
+                </div>
+                <div className="p-4 flex flex-col gap-2 flex-1">
+                  <h3 className="text-lg font-semibold text-white">{art.title}</h3>
+                  <p className="text-sm text-gray-300 flex-1">{art.description}</p>
+                  <div className="text-xs font-semibold text-[#FFD700] uppercase tracking-[0.15em]">
+                    Limited + Personalized
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </Section>
 
@@ -221,13 +304,23 @@ const PUPITOHomepage = () => {
 
       {/* FEATURED */}
       <Section id="shop">
-        <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-2 mb-4 text-center sm:text-left">
-          <h2 className="text-xl sm:text-2xl font-black text-white">
-            FEATURED DROPS
-          </h2>
-          <Link href="/shop#featured" className="text-sm text-[#1E90FF] underline-offset-2 hover:underline">
-            View all
-          </Link>
+        <div className="relative overflow-hidden rounded-2xl border border-[#1E90FF]/15 bg-[#0F0F10] mb-6">
+          <div className="absolute inset-0 pointer-events-none opacity-50">
+            <Image
+              src="/images/pupito-streetwear-grid.svg"
+              alt="Pupito apparel silhouettes and icons"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative flex flex-col sm:flex-row items-center sm:justify-between gap-2 px-4 sm:px-6 py-5 text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-black text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.45)]">
+              FEATURED DROPS
+            </h2>
+            <Link href="/shop#featured" className="text-sm text-[#1E90FF] underline-offset-2 hover:underline">
+              View all
+            </Link>
+          </div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {FEATURED.map((p) => {

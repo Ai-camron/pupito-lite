@@ -1,0 +1,33 @@
+<svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paint0_linear" x1="64" y1="32" x2="356" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF69B4"/>
+      <stop offset="0.45" stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#00FFFF"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="120" y1="80" x2="312" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E90FF"/>
+      <stop offset="1" stop-color="#8A2BE2"/>
+    </linearGradient>
+    <filter id="glow" x="12" y="12" width="396" height="396" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.84
+                0 0 0 0 0.30
+                0 0 0 0 1.00
+                0 0 0 0.45 0"/>
+    </filter>
+  </defs>
+  <rect x="36" y="36" width="348" height="348" rx="52" fill="#0D0D0D" stroke="url(#paint0_linear)" stroke-width="8"/>
+  <g filter="url(#glow)">
+    <rect x="50" y="50" width="320" height="320" rx="44" fill="url(#paint1_linear)" opacity="0.15"/>
+  </g>
+  <path d="M210 330c-65 0-118-53-118-118 0-65 53-118 118-118 65 0 118 53 118 118 0 65-53 118-118 118z" fill="#0D0D0D" stroke="url(#paint0_linear)" stroke-width="10"/>
+  <path d="M188 182c0-18.225 14.775-33 33-33s33 14.775 33 33c0 11.045-5.522 20.835-14 26.802v24.898c0 10.91-8.99 19.8-20 19.8h-8c-11.046 0-20-8.842-20-19.8v-24.898c-8.48-5.967-14-15.757-14-26.802z" fill="url(#paint0_linear)" stroke="#0D0D0D" stroke-width="6"/>
+  <path d="M176 190c-17 0-30-12.54-30-28s13-30 30-30c11 0 20 6 24 16 5-12 17-20 30-20 19 0 34 16 34 34 0 9-5 17-12 23-4 3-10 9-10 13" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <path d="M146 235c9 15 29 27 52 27h28c22 0 43-12 52-27" stroke="#FF69B4" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="172" cy="222" r="10" fill="#1E90FF"/>
+  <circle cx="244" cy="222" r="10" fill="#1E90FF"/>
+  <path d="M210 112c-6 0-12-5-12-12 0-6 6-12 12-12s12 6 12 12c0 7-6 12-12 12zm-58 28c-6 0-12-5-12-12 0-6 6-12 12-12s12 6 12 12c0 7-6 12-12 12zm116 0c-6 0-12-5-12-12 0-6 6-12 12-12s12 6 12 12c0 7-6 12-12 12z" fill="#FF69B4"/>
+  <path d="M122 292c21 22 52 38 88 38s66-16 88-38" stroke="#00FFFF" stroke-width="8" stroke-linecap="round"/>
+</svg>

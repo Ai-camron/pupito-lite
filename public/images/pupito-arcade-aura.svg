@@ -1,0 +1,34 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="60" x2="1300" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0B0E"/>
+      <stop offset="1" stop-color="#14141C"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 430) rotate(90) scale(520 520)">
+      <stop stop-color="#1E90FF" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#FF69B4" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#0B0B0E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFD700" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FF1493" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <rect width="1440" height="900" fill="url(#pulse)"/>
+  <g opacity="0.2" stroke="#FFFFFF" stroke-width="1">
+    <path d="M120 140h1200M120 240h1200M120 340h1200M120 440h1200M120 540h1200M120 640h1200M120 740h1200"/>
+    <path d="M240 90v720M440 90v720M640 90v720M840 90v720M1040 90v720M1240 90v720"/>
+  </g>
+  <rect x="290" y="200" width="860" height="500" rx="56" fill="#0F1118" stroke="#1E90FF" stroke-width="6" opacity="0.5"/>
+  <rect x="320" y="230" width="800" height="440" rx="48" fill="#0D0D0D" stroke="url(#scan)" stroke-width="8" opacity="0.7"/>
+  <path d="M480 560c26 36 72 60 128 60h80c58 0 102-24 128-60" stroke="#FF69B4" stroke-width="16" stroke-linecap="round"/>
+  <path d="M560 430c0-52 42-94 94-94s94 42 94 94c0 28-13 54-34 72v56c0 20-18 38-40 38h-40c-22 0-40-18-40-38v-56c-21-18-34-44-34-72z" fill="url(#scan)" stroke="#0D0D0D" stroke-width="10"/>
+  <path d="M604 440c-24 0-44-20-44-44s20-44 44-44c16 0 30 8 36 20 8-14 24-24 42-24 32 0 58 26 58 58 0 18-8 34-22 44-6 4-14 12-14 18" stroke="#00FFFF" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="618" cy="500" r="18" fill="#1E90FF"/>
+  <circle cx="822" cy="500" r="18" fill="#1E90FF"/>
+  <path d="M510 360c0-22 18-40 40-40s40 18 40 40-18 40-40 40-40-18-40-40zm300 12c0-22 18-40 40-40s40 18 40 40-18 40-40 40-40-18-40-40z" fill="#FF1493"/>
+  <path d="M360 620c40 64 120 120 230 120h260c112 0 192-58 232-120" stroke="#FFD700" stroke-width="12" stroke-linecap="round" opacity="0.7"/>
+  <text x="720" y="180" text-anchor="middle" fill="#FFFFFF" font-family="Inter, 'Segoe UI', system-ui" font-size="48" font-weight="800" letter-spacing="0.12em">PUPITO ARCADE AURA</text>
+  <text x="720" y="220" text-anchor="middle" fill="#FFD700" font-family="Inter, 'Segoe UI', system-ui" font-size="18" letter-spacing="0.4em">NEON NOIR DROP</text>
+</svg>
