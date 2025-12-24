@@ -1,74 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { createEmailTransporter, resolveEmailEnv } from '@/lib/env';
 
 interface ChatMessage {
   message: string;
   userEmail?: string;
   userName?: string;
   requestHuman?: boolean;
-}
-
-// Create email transporter (reusing config from other routes)
-function createTransporter() {
-  const emailProvider = process.env.EMAIL_PROVIDER || 'outlook';
-  
-  const emailConfigs = {
-    gmail: {
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD,
-      },
-    },
-    outlook: {
-      host: 'smtp-mail.outlook.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD || process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        ciphers: 'SSLv3',
-        rejectUnauthorized: false,
-        starttls: true,
-      },
-      requireTLS: true,
-      authMethod: 'PLAIN',
-    },
-    'outlook-basic': {
-      host: 'smtp.office365.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    },
-    hostinger: {
-      host: process.env.EMAIL_HOST || 'smtp.hostinger.com',
-      port: parseInt(process.env.EMAIL_PORT || '587'),
-      secure: process.env.EMAIL_SECURE === 'true',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    },
-  };
-
-  const config = emailConfigs[emailProvider as keyof typeof emailConfigs];
-  
-  if (!config) {
-    throw new Error(`Unsupported email provider: ${emailProvider}`);
-  }
-
-  return nodemailer.createTransport(config);
 }
 
 export async function POST(request: NextRequest) {
@@ -85,23 +22,17 @@ export async function POST(request: NextRequest) {
 
     // If user requests human help, send email notification
     if (requestHuman) {
-      const provider = process.env.EMAIL_PROVIDER || 'outlook';
-      const requiredEnvVars = (provider === 'gmail' || provider === 'outlook') 
-        ? ['EMAIL_USER'] 
-        : ['EMAIL_USER', 'EMAIL_PASSWORD'];
+      const emailEnv = resolveEmailEnv();
       
-      const hasEmailConfig = requiredEnvVars.every(envVar => process.env[envVar]) && 
-        (process.env.EMAIL_APP_PASSWORD || process.env.EMAIL_PASSWORD);
-      
-      if (hasEmailConfig) {
+      if (emailEnv.hasEmailConfig) {
         try {
-          const transporter = createTransporter();
+          const transporter = createEmailTransporter(emailEnv);
           await transporter.verify();
-          
-          const notificationEmail = process.env.NOTIFICATION_EMAIL || process.env.EMAIL_USER;
+
+          const notificationEmail = emailEnv.notificationEmail;
           
           await transporter.sendMail({
-            from: `"PUPITO Chat Alert" <${process.env.EMAIL_USER}>`,
+            from: `"PUPITO Chat Alert" <${emailEnv.user}>`,
             to: notificationEmail,
             subject: '🤖➡️👨 PUPITO Chat: Human Assistance Requested',
             replyTo: userEmail || undefined,
@@ -204,6 +135,8 @@ export async function POST(request: NextRequest) {
         } catch (emailError) {
           console.error('Failed to send human assistance notification:', emailError);
         }
+      } else {
+        console.warn('Email configuration incomplete. Missing environment variables:', emailEnv.missingEnvVars);
       }
     }
 

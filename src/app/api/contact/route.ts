@@ -1,71 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { createEmailTransporter, resolveEmailEnv } from '@/lib/env';
 
 // Email validation regex
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Create email transporter (reusing the same config from newsletter)
-function createTransporter() {
-  const emailProvider = process.env.EMAIL_PROVIDER || 'outlook';
-  
-  const emailConfigs = {
-    gmail: {
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD,
-      },
-    },
-    outlook: {
-      host: 'smtp-mail.outlook.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD || process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        ciphers: 'SSLv3',
-        rejectUnauthorized: false,
-        starttls: true,
-      },
-      requireTLS: true,
-      authMethod: 'PLAIN',
-    },
-    'outlook-basic': {
-      host: 'smtp.office365.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    },
-    hostinger: {
-      host: process.env.EMAIL_HOST || 'smtp.hostinger.com',
-      port: parseInt(process.env.EMAIL_PORT || '587'),
-      secure: process.env.EMAIL_SECURE === 'true',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    },
-  };
-
-  const config = emailConfigs[emailProvider as keyof typeof emailConfigs];
-  
-  if (!config) {
-    throw new Error(`Unsupported email provider: ${emailProvider}`);
-  }
-
-  return nodemailer.createTransport(config);
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -96,17 +33,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if email system is configured
-    const provider = process.env.EMAIL_PROVIDER || 'outlook';
-    const requiredEnvVars = (provider === 'gmail' || provider === 'outlook') 
-      ? ['EMAIL_USER'] 
-      : ['EMAIL_USER', 'EMAIL_PASSWORD'];
+    const emailEnv = resolveEmailEnv();
     
-    const hasEmailConfig = requiredEnvVars.every(envVar => process.env[envVar]) && 
-      (process.env.EMAIL_APP_PASSWORD || process.env.EMAIL_PASSWORD);
-    
-    if (!hasEmailConfig) {
-      console.error('Email configuration incomplete. Missing environment variables:', 
-        requiredEnvVars.filter(envVar => !process.env[envVar]));
+    if (!emailEnv.hasEmailConfig) {
+      console.error('Email configuration incomplete. Missing environment variables:', emailEnv.missingEnvVars);
       return NextResponse.json(
         { error: 'Email service temporarily unavailable. Please try again later.' },
         { status: 503 }
@@ -114,12 +44,12 @@ export async function POST(request: NextRequest) {
     }
 
     try {
-      const transporter = createTransporter();
+      const transporter = createEmailTransporter(emailEnv);
       
       // Verify connection before sending
       await transporter.verify();
       
-      const notificationEmail = process.env.NOTIFICATION_EMAIL || process.env.EMAIL_USER;
+      const notificationEmail = emailEnv.notificationEmail;
       
       // Get subject category icon
       const subjectIcons = {
@@ -135,7 +65,7 @@ export async function POST(request: NextRequest) {
       
       // Send notification email to you
       await transporter.sendMail({
-        from: `"PUPITO Contact Form" <${process.env.EMAIL_USER}>`,
+        from: `"PUPITO Contact Form" <${emailEnv.user}>`,
         to: notificationEmail,
         subject: `${subjectIcon} PUPITO Contact: ${subject.charAt(0).toUpperCase() + subject.slice(1)}`,
         replyTo: email,
@@ -224,7 +154,7 @@ export async function POST(request: NextRequest) {
       
       // Send auto-reply confirmation to customer
       await transporter.sendMail({
-        from: `"PUPITO Support" <${process.env.EMAIL_USER}>`,
+        from: `"PUPITO Support" <${emailEnv.user}>`,
         to: email,
         subject: `✅ We got your message! - PUPITO Support`,
         html: `
