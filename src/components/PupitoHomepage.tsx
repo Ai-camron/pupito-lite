@@ -432,6 +432,7 @@ const PUPITOHomepage = () => {
             <input
               type="email"
               placeholder="Enter your email address"
+              aria-label="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 h-12 px-4 text-base rounded-xl border border-[#22d3ee]/30 bg-[#1A1A1A]/80 backdrop-blur text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-[#0ea5e9] transition-all duration-300 shadow-[0_0_10px_rgba(34,211,238,0.2)] focus:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
@@ -462,6 +463,7 @@ const PUPITOHomepage = () => {
           onClick={() => setIsChatbotOpen(true)}
           className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 p-3 sm:p-4 bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] hover:from-[#1E90FF] hover:to-[#00FFFF] text-black hover:text-white rounded-full shadow-[0_0_30px_rgba(14,165,233,0.45)] hover:shadow-[0_0_40px_rgba(30,144,255,0.6)] transition-all duration-300"
           title="Chat with PupiBot"
+          aria-label="Open PupiBot chat"
         >
           <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
