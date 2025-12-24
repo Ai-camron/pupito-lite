@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
+import { getJwtSecret } from '@/lib/env'
 
 // Mock user database - In production, use a real database
 const mockUsers = [
@@ -14,12 +15,11 @@ const mockUsers = [
   },
 ]
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-key-change-this-in-production'
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { email, password, rememberMe } = body
+    const jwtSecret = getJwtSecret()
 
     // Validation
     if (!email || !password) {
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
       expiresIn: expiresInSeconds,
     }
 
-    const token = jwt.sign(tokenPayload, JWT_SECRET, tokenOptions)
+    const token = jwt.sign(tokenPayload, jwtSecret, tokenOptions)
 
     // Create response
     const response = NextResponse.json(
@@ -101,8 +101,12 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Login error:', error)
+    const message = error instanceof Error && error.message.includes('JWT_SECRET')
+      ? 'Server configuration error: missing JWT secret.'
+      : 'Internal server error'
+
     return NextResponse.json(
-      { message: 'Internal server error' },
+      { message },
       { status: 500 }
     )
   }

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 import fs from 'fs/promises';
 import path from 'path';
+import { createEmailTransporter, resolveEmailEnv } from '@/lib/env';
 
 // Email validation regex
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,70 +34,6 @@ async function readEmailList(): Promise<{ emails: string[], signups: Array<{emai
 async function saveEmailList(data: { emails: string[], signups: Array<{email: string, date: string}> }) {
   await ensureDataDirectory();
   await fs.writeFile(emailListPath, JSON.stringify(data, null, 2));
-}
-
-// Create email transporter with support for multiple providers
-function createTransporter() {
-  const emailProvider = process.env.EMAIL_PROVIDER || 'outlook';
-  
-  // Configuration for different email providers
-  const emailConfigs = {
-    gmail: {
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD,
-      },
-    },
-    outlook: {
-      host: 'smtp-mail.outlook.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD || process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        ciphers: 'SSLv3',
-        rejectUnauthorized: false,
-        starttls: true,
-      },
-      requireTLS: true,
-      authMethod: 'PLAIN',
-    },
-    'outlook-basic': {
-      host: 'smtp.office365.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    },
-    hostinger: {
-      host: process.env.EMAIL_HOST || 'smtp.hostinger.com',
-      port: parseInt(process.env.EMAIL_PORT || '587'),
-      secure: process.env.EMAIL_SECURE === 'true', // true for 465, false for 587
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    },
-  };
-
-  const config = emailConfigs[emailProvider as keyof typeof emailConfigs];
-  
-  if (!config) {
-    throw new Error(`Unsupported email provider: ${emailProvider}`);
-  }
-
-  return nodemailer.createTransport(config);
 }
 
 export async function POST(request: NextRequest) {
@@ -136,25 +72,19 @@ export async function POST(request: NextRequest) {
     await saveEmailList(emailData);
 
     // Send notification email to you (if email credentials are configured)
-    const provider = process.env.EMAIL_PROVIDER || 'outlook';
-    const requiredEnvVars = (provider === 'gmail' || provider === 'outlook') 
-      ? ['EMAIL_USER'] 
-      : ['EMAIL_USER', 'EMAIL_PASSWORD'];
+    const emailEnv = resolveEmailEnv();
     
-    const hasEmailConfig = requiredEnvVars.every(envVar => process.env[envVar]) && 
-      (process.env.EMAIL_APP_PASSWORD || process.env.EMAIL_PASSWORD);
-    
-    if (hasEmailConfig) {
+    if (emailEnv.hasEmailConfig) {
       try {
-        const transporter = createTransporter();
+        const transporter = createEmailTransporter(emailEnv);
         
         // Verify connection before sending
         await transporter.verify();
         
-        const notificationEmail = process.env.NOTIFICATION_EMAIL || process.env.EMAIL_USER;
+        const notificationEmail = emailEnv.notificationEmail;
         
         await transporter.sendMail({
-          from: `"PUPITO Squad Alerts" <${process.env.EMAIL_USER}>`,
+          from: `"PUPITO Squad Alerts" <${emailEnv.user}>`,
           to: notificationEmail,
           subject: '🎯 New PUPITO Pup Squad Member!',
           html: `
@@ -190,7 +120,7 @@ export async function POST(request: NextRequest) {
         
         // Send welcome email to the subscriber
         await transporter.sendMail({
-          from: `"PUPITO Pup Squad" <${process.env.EMAIL_USER}>`,
+          from: `"PUPITO Pup Squad" <${emailEnv.user}>`,
           to: email,
           subject: '🎉 Welcome to the PUPITO Pup Squad!',
           html: `
@@ -283,8 +213,7 @@ export async function POST(request: NextRequest) {
         // Don't fail the signup if email sending fails
       }
     } else {
-      console.log('Email configuration incomplete. Missing environment variables:', 
-        requiredEnvVars.filter(envVar => !process.env[envVar]));
+      console.log('Email configuration incomplete. Missing environment variables:', emailEnv.missingEnvVars);
     }
 
     return NextResponse.json({
