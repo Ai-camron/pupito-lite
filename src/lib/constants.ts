@@ -15,6 +15,10 @@ export const STORE_INFO = {
   emailProvider: 'Mailchimp'
 } as const;
 
+export const OWNER_ACCESS = {
+  emails: ['owner@pupitowear.com', STORE_CONTACT.email]
+} as const;
+
 export const SEO_METADATA = {
   about: {
     title: 'About PUPITO | Anime-Inspired Streetwear Brand',

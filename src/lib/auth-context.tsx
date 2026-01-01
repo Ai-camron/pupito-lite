@@ -1,6 +1,7 @@
 'use client'
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { isOwnerEmail } from '@/lib/owner'
 
 interface User {
   id: string
@@ -13,6 +14,7 @@ interface User {
 interface AuthContextType {
   user: User | null
   isLoggedIn: boolean
+  isOwner: boolean
   login: (email: string, password: string) => Promise<boolean>
   logout: () => void
   signup: (email: string, password: string, firstName: string, lastName: string) => Promise<boolean>
@@ -105,6 +107,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const value = {
     user,
     isLoggedIn: !!user,
+    isOwner: isOwnerEmail(user?.email),
     login,
     logout,
     signup,
