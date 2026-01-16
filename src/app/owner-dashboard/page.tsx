@@ -277,8 +277,8 @@ export default function OwnerDashboardPage() {
                   <p className="mt-2 text-sm text-white/60">No images uploaded yet.</p>
                 ) : (
                   <ul className="mt-2 space-y-2 text-sm text-white/80">
-                    {draftImages.slice(0, 3).map((image) => (
-                      <li key={`${image.fileName}-${image.altText}`} className="rounded-xl border border-[#22d3ee]/20 bg-[#0b1224]/60 px-3 py-2">
+                    {draftImages.slice(0, 3).map((image, index) => (
+                      <li key={`${image.fileName}-${image.altText}-${index}`} className="rounded-xl border border-[#22d3ee]/20 bg-[#0b1224]/60 px-3 py-2">
                         <p className="font-semibold text-white">{image.fileName || 'Untitled image'}</p>
                         <p className="text-xs text-white/60">Alt text: {image.altText || 'Pending'}</p>
                       </li>
