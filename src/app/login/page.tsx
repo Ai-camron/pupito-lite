@@ -15,6 +15,7 @@ import {
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/lib/auth-context'
+import { isOwnerEmail } from '@/lib/owner'
 
 interface LoginForm {
   email: string
@@ -86,7 +87,9 @@ export default function LoginPage() {
       }
       
       // Success - redirect to account page or return to previous page
-      const redirectTo = new URLSearchParams(window.location.search).get('redirect') || '/account'
+      const redirectOverride = new URLSearchParams(window.location.search).get('redirect')
+      const defaultRedirect = isOwnerEmail(formData.email) ? '/owner-dashboard' : '/account'
+      const redirectTo = redirectOverride || defaultRedirect
       router.push(redirectTo)
     } catch (error) {
       setErrors({ general: error instanceof Error ? error.message : 'Authentication failed. Please try again.' })
