@@ -237,7 +237,7 @@ export default function OwnerDashboardPage() {
               <div className="rounded-2xl border border-[#22d3ee]/20 bg-[#0b1224]/70 p-4">
                 <p className="text-sm font-semibold text-white">Connection health</p>
                 <p className="mt-2 text-sm text-white/70">
-                  Printful API is authenticated. Last sync completed <span className="text-white">12 minutes ago</span>.
+                  Printful API is authenticated. Last sync timestamp shown here is placeholder data and should be replaced with the real value from your Printful integration.
                 </p>
                 <Link
                   href="https://www.printful.com/docs"
