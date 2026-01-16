@@ -112,9 +112,9 @@ export default function OwnerDashboardPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-[#0D0D0D] via-[#0a1a24] to-[#0D0D0D] flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-[#0D0D0D] via-[#0a1a24] to-[#0D0D0D] flex items-center justify-center px-4">
         <div className="max-w-md w-full rounded-2xl border border-[#22d3ee]/20 bg-[#0f172a]/80 p-8 text-center shadow-[0_0_40px_rgba(34,211,238,0.25)]">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-linear-to-br from-[#22d3ee] to-[#0ea5e9] shadow-[0_0_25px_rgba(34,211,238,0.3)]">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#22d3ee] to-[#0ea5e9] shadow-[0_0_25px_rgba(34,211,238,0.3)]">
             <ShieldCheck className="h-6 w-6 text-[#0b1224]" aria-hidden="true" />
           </div>
           <h1 className="text-xl font-bold text-white">Confirming owner access…</h1>
