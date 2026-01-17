@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import OnlineStoreCallout from "@/components/OnlineStoreCallout";
 
 type FeaturedProduct = {
   id: number;
@@ -105,14 +106,14 @@ const COLLECTIONS: CollectionHighlight[] = [
     id: 1,
     name: "MIDNIGHT CITY",
     tagline: "Neon Noir Staples",
-    colors: "from-[#1E90FF] via-[#8A2BE2] to-[#FF00FF]",
+    colors: "from-[#1E90FF] via-[#8A2BE2] to-[#6366f1]",
     description: "Layer electric blues with ultraviolet shadows for every skyline meet-up.",
   },
   {
     id: 2,
     name: "DREAMER ARC",
     tagline: "Soft Core Anime",
-    colors: "from-[#FF69B4] via-[#FFD700] to-[#FF6B6B]",
+    colors: "from-[#22d3ee] via-[#FFD700] to-[#14b8a6]",
     description: "Pastel gradients and cinematic embroidery for gentle energy main characters.",
   },
   {
@@ -209,7 +210,7 @@ const CRAFT_HIGHLIGHTS: CraftHighlight[] = [
   },
 ];
 
-const SHOP_FAQ: ShopFaq[] = [
+export const SHOP_FAQ: ShopFaq[] = [
   {
     id: 1,
     question: "When will I get my order?",
@@ -240,6 +241,18 @@ const SHOP_FAQ: ShopFaq[] = [
     answer:
       "Yes—once your package ships, you’ll receive a tracking link via email so you can follow it home.",
   },
+  {
+    id: 6,
+    question: "How do I find the right size?",
+    answer:
+      "Each product page includes a detailed size chart with measurements in inches and centimeters. Our fits run true to size, but if you prefer an oversized look, we recommend sizing up one.",
+  },
+  {
+    id: 7,
+    question: "Do you have a loyalty or rewards program?",
+    answer:
+      "Yes! Join the Pup Squad to earn loyalty XP on every purchase. Members get early access to limited drops, exclusive colorways, and double points on seasonal collaborations.",
+  },
 ];
 
 const MOTION_VARIANTS = {
@@ -254,7 +267,7 @@ const MOTION_VARIANTS = {
 const ShopShowcase = () => {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white font-[Lato]">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#1E90FF22,transparent_55%),radial-gradient(circle_at_bottom,#FF69B422,transparent_55%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#1E90FF22,transparent_55%),radial-gradient(circle_at_bottom,#22d3ee22,transparent_55%)]" />
 
       <section
         id="hero"
@@ -269,7 +282,7 @@ const ShopShowcase = () => {
             className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] items-center"
           >
             <div className="space-y-6">
-              <p className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#FF69B4]">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#22d3ee]">
                 <Sparkles className="h-4 w-4" aria-hidden="true" />
                 New Era Drop
               </p>
@@ -280,10 +293,10 @@ const ShopShowcase = () => {
                 Streetwear tuned for anime dreamers. Layer neon gradients, magnetic textures, and story-coded silhouettes for every late-night arc.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild className="bg-gradient-to-r from-[#1E90FF] to-[#00FFFF] hover:from-[#FFD700] hover:to-[#FF69B4] hover:text-black text-white font-semibold rounded-xl px-6 py-3 shadow-[0_0_20px_rgba(30,144,255,0.4)]">
+                <Button asChild className="bg-gradient-to-r from-[#1E90FF] to-[#00FFFF] hover:from-[#FFD700] hover:to-[#22d3ee] hover:text-black text-white font-semibold rounded-xl px-6 py-3 shadow-[0_0_20px_rgba(30,144,255,0.4)]">
                   <Link href="/checkout">Secure Checkout</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-2 border-[#FF69B4] bg-transparent text-[#FF69B4] hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:to-[#FF1493] hover:text-black hover:border-[#FF1493] rounded-xl px-6 py-3">
+                <Button asChild variant="outline" className="border-2 border-[#22d3ee] bg-transparent text-[#22d3ee] hover:bg-gradient-to-r hover:from-[#14b8a6] hover:to-[#0ea5e9] hover:text-black hover:border-[#0ea5e9] rounded-xl px-6 py-3">
                   <Link href="#collections">Browse Collections</Link>
                 </Button>
               </div>
@@ -304,14 +317,14 @@ const ShopShowcase = () => {
             </div>
 
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
-              <div className="absolute inset-0 bg-linear-to-br from-[#FF1493]/40 via-transparent to-[#1E90FF]/40" aria-hidden="true" />
+              <div className="absolute inset-0 bg-linear-to-br from-[#0ea5e9]/40 via-transparent to-[#1E90FF]/40" aria-hidden="true" />
               <div className="relative space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="grid h-12 w-12 place-items-center rounded-full bg-white/10">
                     <ShoppingBag className="h-6 w-6 text-[#FFD700]" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.35em] text-[#FF69B4]">Drop Radar</p>
+                    <p className="text-sm uppercase tracking-[0.35em] text-[#22d3ee]">Drop Radar</p>
                     <p className="text-lg font-semibold text-white">1,200+ community reviews</p>
                   </div>
                 </div>
@@ -372,7 +385,7 @@ const ShopShowcase = () => {
                 <div className="relative h-full rounded-[calc(theme(borderRadius.3xl)-4px)] bg-black/80 p-6">
                   <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/10 via-transparent to-transparent" aria-hidden="true" />
                   <header className="relative space-y-2">
-                    <p className="text-xs uppercase tracking-[0.4em] text-[#FF69B4]">
+                    <p className="text-xs uppercase tracking-[0.4em] text-[#22d3ee]">
                       {collection.tagline}
                     </p>
                     <h3 id={`collection-${collection.id}`} className="text-2xl font-bold text-white">
@@ -417,7 +430,7 @@ const ShopShowcase = () => {
               <motion.article
                 key={product.id}
                 {...MOTION_VARIANTS.fadeUp}
-                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_0_30px_rgba(255,105,180,0.12)]"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_0_30px_rgba(34,211,238,0.16)]"
                 aria-labelledby={`product-${product.id}`}
               >
                 <div className="relative aspect-[4/5] bg-black/60">
@@ -445,7 +458,7 @@ const ShopShowcase = () => {
                     <Button
                       asChild
                       size="sm"
-                      className="rounded-lg bg-linear-to-r from-[#FF69B4] to-[#FF1493] text-white hover:from-[#FFD700] hover:to-[#FF69B4] hover:text-black"
+                      className="rounded-lg bg-linear-to-r from-[#22d3ee] to-[#0ea5e9] text-white hover:from-[#FFD700] hover:to-[#22d3ee] hover:text-black"
                     >
                       <Link href={`/products/${product.id}`}>View Fit</Link>
                     </Button>
@@ -489,7 +502,7 @@ const ShopShowcase = () => {
                   <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/40" aria-hidden="true" />
                 </div>
                 <figcaption className="space-y-2 p-6">
-                  <p className="text-xs uppercase tracking-[0.35em] text-[#FF69B4]">Community fit #{spread.id}</p>
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#22d3ee]">Community fit #{spread.id}</p>
                   <h3 className="text-lg font-semibold text-white">{spread.title}</h3>
                   <p className="text-sm text-gray-300">{spread.description}</p>
                 </figcaption>
@@ -521,7 +534,7 @@ const ShopShowcase = () => {
                 role="listitem"
                 className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6"
               >
-                <div className="absolute inset-0 bg-linear-to-br from-[#1E90FF]/15 via-transparent to-[#FF69B4]/15" aria-hidden="true" />
+                <div className="absolute inset-0 bg-linear-to-br from-[#1E90FF]/15 via-transparent to-[#22d3ee]/15" aria-hidden="true" />
                 <div className="relative space-y-3">
                   <p className="text-xs uppercase tracking-[0.35em] text-[#FFD700]">{highlight.label}</p>
                   <h3 className="text-2xl font-bold text-white">{highlight.value}</h3>
@@ -558,7 +571,7 @@ const ShopShowcase = () => {
                   className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 text-left shadow-[0_0_25px_rgba(0,0,0,0.35)]"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                    <Icon className="h-6 w-6 text-[#FF69B4]" aria-hidden="true" />
+                    <Icon className="h-6 w-6 text-[#22d3ee]" aria-hidden="true" />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-white">{benefit.title}</h3>
                   <p className="mt-2 text-sm text-gray-300">{benefit.description}</p>
@@ -596,6 +609,12 @@ const ShopShowcase = () => {
         </div>
       </section>
 
+      <section className="border-t border-white/10 bg-[#0D0D0D]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <OnlineStoreCallout />
+        </div>
+      </section>
+
       <section id="join" aria-labelledby="cta-heading" className="border-t border-white/10 bg-linear-to-r from-[#1E1B4B] via-[#0D0D0D] to-[#1E90FF]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
@@ -611,7 +630,7 @@ const ShopShowcase = () => {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
                 asChild
-                className="rounded-xl bg-gradient-to-r from-[#FF69B4] via-[#FF1493] to-[#8A2BE2] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(255,105,180,0.35)] hover:from-[#FFD700] hover:via-[#FF69B4] hover:to-[#1E90FF] hover:text-black"
+                className="rounded-xl bg-gradient-to-r from-[#22d3ee] via-[#0ea5e9] to-[#8A2BE2] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(34,211,238,0.35)] hover:from-[#FFD700] hover:via-[#22d3ee] hover:to-[#1E90FF] hover:text-black"
               >
                 <Link href="/login">Join the Pack</Link>
               </Button>

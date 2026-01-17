@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/**/*.test.mjs"
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
@@ -20,7 +20,7 @@
     "framer-motion": "^12.23.24",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.553.0",
-    "next": "16.0.1",
+    "next": "16.0.10",
     "nodemailer": "^7.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0",

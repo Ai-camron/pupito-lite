@@ -63,10 +63,16 @@ test('shop FAQ communicates key support policies', () => {
     'How are Pupito products made?',
     'What if something arrives damaged?',
     'Do you offer returns or exchanges?',
-    'Can I track my order?'
+    'Can I track my order?',
+    'How do I find the right size?',
+    'Do you have a loyalty or rewards program?'
   ].forEach((question) => {
     assert.ok(source.includes(`question: \"${question}\"`), `FAQ entry missing for ${question}`)
   })
+})
+
+test('SHOP_FAQ is exported for reuse', () => {
+  assert.match(source, /export const SHOP_FAQ/, 'SHOP_FAQ should be exported')
 })
 
 test('shop sections expose anchors for navigation shortcuts', () => {
