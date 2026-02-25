@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import type SMTPTransport from 'nodemailer/lib/smtp-transport'
 
 type EmailProvider = 'gmail' | 'outlook' | 'outlook-basic' | 'hostinger'
 
@@ -73,7 +74,7 @@ export function createEmailTransporter(emailEnv: EmailEnvironment = resolveEmail
 
   const basePassword = emailEnv.appPassword || emailEnv.password
 
-  const emailConfigs: Record<EmailProvider, Parameters<typeof nodemailer.createTransport>[0]> = {
+  const emailConfigs: Record<EmailProvider, SMTPTransport.Options> = {
     gmail: {
       service: 'gmail',
       auth: {
